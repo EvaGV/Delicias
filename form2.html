@@ -17,23 +17,23 @@
         rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../Delicias/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Formulario 2</title>
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../Delicias/img/dn_white.png" alt="logo">
+            <img src="img/dn_white.png" alt="logo">
         </div>
 
         <!-- MENÚ PRINCIPAL -->
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="../Delicias/catalog.html">Productos</a></li>
-                <li><a href="../Delicias/client.html"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="../Delicias/cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li><a href="catalog.html">Productos</a></li>
+                <li><a href="client.html"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
             </ul>
         </nav>
 
@@ -45,9 +45,9 @@
         <nav class="menu-dropdown">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="../Delicias/catalog.html">Productos</a></li>
-                <li><a href="../Delicias/client.html">Mi Cuenta</a></li>
-                <li><a href="../Delicias/cart.html">Carrito</a></li>
+                <li><a href="catalog.html">Productos</a></li>
+                <li><a href="client.html">Mi Cuenta</a></li>
+                <li><a href="cart.html">Carrito</a></li>
             </ul>
         </nav>
 
@@ -58,24 +58,41 @@
 
 <main class="bg">
 
-    <div class="formulario-img__2">
-
-        <h2>1º Dinos tus preferencias</h2>
-
-    </div>
+    <div class="formulario-img__2"></div>
     
-        <section class="registro-formulario">
-            <h4>EMPIEZA EL CAMBIO</h4>
-            <input class="control-formulario" type="text" name="nombres" id="nombres" placeholder="Nombre">
-            <input class="control-formulario" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-            <input class="control-formulario" type="email" name="correo" id="correo" placeholder="Correo electrónico">
-            <input class="control-formulario" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-            <p>Estoy de acuerdo con <a href="#">TyC</a></p>
-            <a href="#"> <input class="btn" type="submit" value="Registrarme"> </a>
-            <p><a href="#">Ya tengo una cuenta</a></p> 
+    <section class="registro-formulario">
+        <form action="#" method="get">
+            <h4>¿Cada cuánto quieres recibir el pedido en tu domicilio?</h4>
+            
+            <div class="registro-formulario--period">
+                <label for="semanal">Cada semana</label>
+                <input type="radio" id="semanal" name="tiempo" value="semanal">
+            </div>
     
-        </section>
+            <div class="registro-formulario--period">
+                <label for="bisemanal">Cada dos semanas</label>
+                <input type="radio" id="bisemanal" name="tiempo" value="bisemanal">
+            </div>
     
+            <div class="registro-formulario--period">
+                <label for="trisemanal">Cada tres semanas</label>
+                <input type="radio" id="trisemanal" name="tiempo" value="trisemanal">
+            </div>
+    
+            <div class="registro-formulario--period">
+                <label for="mensual">Mensualmente</label>
+                <input type="radio" id="mensual" name="tiempo" value="mensual">
+            </div>
+            
+            <div >
+                <button class="btn" type="submit">Siguiente</button>
+            </div>
+        </form>
+    </section>
+    
+    <button id="btnScrollToTop" class="btn-scroll-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 </main>
 
     
@@ -110,7 +127,7 @@
         </div>
     </footer>
 
-    <script src="../Delicias/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

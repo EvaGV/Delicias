@@ -43,7 +43,7 @@ footer {
     flex-shrink: 0;
 }
 
-.btn{
+.btn, .btn-next{
     font-size: 1em;
     color: #325407;
     padding: 10px 25px;
@@ -55,7 +55,7 @@ footer {
     
     
 }
-.btn:hover{
+.btn:hover, .btn-next:hover{
     background-color: #325407;
     color: #faf6d2;
     transform: scale(1.1);
@@ -244,6 +244,31 @@ body.dark-mode .footer {
     font-size: 0.7em;
 }
 
+/*-------------------
+     BOTÓN SCROLL
+------------------ */
+.btn-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #540627;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: none; /* Botón oculto por defecto */
+    z-index: 100;
+}
+
+.btn-scroll-top:hover {
+    background-color: #c56d91;
+}
+
+
+
+
 /* ---------------------
            MAIN 
  ----------------------*/
@@ -290,8 +315,7 @@ body.dark-mode .footer {
     from {width: 0;}
     to{width: 100%;}
     
-}@keyframes blink{
-50%{
+}@keyframes blink{ 50%{
     border-color: transparent;
 }
 }
@@ -399,27 +423,21 @@ small {
 ------------------------------- */
 
 .bg{
-    background-image: url(/Proyecto/img/fondo.png);
+    background-image: url(/img/fondo.png);
 }
+
 .registro-formulario {
     display: grid;
     width: 400px;
     background-color: #540627;
-    
     padding: 30px;
     margin: auto;
     margin-bottom: 100px;
     border-radius: 30px;
     margin-top: 100px;
-
     color: #ffffff;
     box-shadow: 7px 13px 37px #81664c;
-}
-
-@media (width < 480px) {
-    .registro-formulario {
-        width: 70%;
-    }
+    text-align: center;
 }
 
 .registro-formulario h4 {
@@ -427,19 +445,56 @@ small {
     margin-bottom: 20px;
     text-align: center;
     color: #FFF;
-    
 }
 
-
-.control-formulario {
+.formulario {
     width: 90%;
     background-color: #f8f2e5;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid #faf6d2;
-    
     font-size: 18px;
+}
+
+.registro-formulario--period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f8f2e5;
+    color: #540627; 
+    border-color: #540627;
+    border: 2px solid;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.registro-formulario--period:hover {
+    background-color: #540627; 
+    color: #fff; 
+    border-color: #fff;
+    transform: scale(1.1);
+}
+
+.registro-formulario--habits {
+    display: inline-block;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #540627;
+    color: #fff; 
+    border-color: #540627;
+    border: 2px solid;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
 }
 
 .registro-formulario p {
@@ -457,16 +512,12 @@ small {
 
 .registro-formulario a:hover {
     color: #a0c175;
-    text-decoration: underline;
+    text-decoration: none;
 }
-
-
-
-
 
 .formulario-img {
 
-    background-image: url('/Proyecto/img/form.jpg');
+    background-image: url('/img/form.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -479,7 +530,7 @@ small {
 }
 
 .formulario-img__2{
-    background-image: url('/Proyecto/img/form2.jpg');
+    background-image: url('/img/form2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -491,14 +542,47 @@ small {
 
 }
 
-.formulario-img h2 {
+.formulario-img__3{
+    background-image: url('/img/varios2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ .formulario-img h2 {
     color: #fff;
     font-size: 2em;
     text-align: center;
-    margin-top: 20px;
-    
-    
 }
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.observaciones {
+    margin-top: 20px;
+    text-align: left;
+}
+
+
 
 
 
@@ -548,5 +632,14 @@ small {
     .header .nav {
         display: none;
     }
+    .checkbox-group {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
     
+}
+
+@media (width < 480px) {
+    .registro-formulario {
+        width: 70%;
+    }
 }

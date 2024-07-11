@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <!-- <link rel="stylesheet" src="../Delicias/css/style.css"> -->
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red", sans-serif;
+    font-size: 18px;
+}
+
+html, body {
+    height: 100%;
+    background-color: #faf6d2;
+    /* background-image: url(../img/citricos.jpg); */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: repeat; */
+}
+
+header {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.btn{
+    font-size: 1em;
+    color: #325407;
+    padding: 10px 25px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+    
+}
+.btn:hover{
+    background-color: #325407;
+    color: #faf6d2;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+
+
+/* HEADER */
+.header {
+    background-color: #325407;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: relative;
+}
+.header .logo {
+    cursor: pointer;
+}
+.header .logo img {
+    height: 250px; 
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+.header .nav {
+    list-style: none;
+    color: #fff;
+    display: flex;
+}
+.header .nav ul {
+    display: flex;
+    list-style: none; /* Elimina los puntos de la lista */
+}
+.header .nav li {
+    padding: 0 20px;
+}
+.header .nav li:hover {
+    transform: scale(1.1);
+    color: #faf6d2;
+}
+.header .nav a {
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+.header .nav li a:hover {
+    color: #faf6d2;
+}
+.header .btn-dark {
+    font-size: 1em;
+    color: #325407;
+    padding: 10px 25px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.btn-dark:hover {
+    background-color: #325407;
+    color: #faf6d2;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+
+    
+    
+        <header class="header">
+            <div class="logo">
+                <img src="../Delicias/img/dn_white.png" alt="logo">
+            </div>
+    
+            <!-- MENÚ PRINCIPAL -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../Delicias/catalog.html">Productos</a></li>
+                    <li><a href="../Delicias/client.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="../Delicias/cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                </ul>
+            </nav>
+</body>
+</html>

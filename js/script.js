@@ -51,3 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //____________________________________________________________
+
+
+document.getElementById('anterior').addEventListener('click', function () {
+    window.location.href = 'form2.html';
+});
+
+
+document.getElementById('siguiente').addEventListener('click', function () {
+    window.location.href = 'formulario.html';
+});

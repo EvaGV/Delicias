@@ -14,7 +14,7 @@
 
     <!-- Estilos -->
    <link rel="stylesheet" href="prueba.css">
-    <title>Sobre nosotros y Contacto</title>
+    <title>ZZusuario</title>
     
 </head>
 
@@ -51,38 +51,53 @@
     </header>
 
     <main class="main">
-        <section class="about">
-            <h2 class="section__title">Sobre Nosotros</h2>
-            <p class="section__text">Delicias Naturales nace para hacer más fácil el proceso de compra a nuestros clientes, ofreciendo una selección de frutas frescas y productos naturales de alta calidad. Ubicados en el corazón de Zaragoza, nos apasiona promover una alimentación saludable y sostenible.<br>
-
-                Nuestro compromiso es garantizar que cada producto que ofrecemos cumpla con los más altos estándares de frescura y sabor. Trabajamos directamente con agricultores locales para asegurar que nuestras frutas y verduras sean siempre de la mejor calidad, apoyando así a la comunidad y fomentando prácticas agrícolas responsables.<br>
+        <section class="registro-container">
+            <section class="registro">
+                <div class="perfil__header">
+                    <img class="perfil__img" src="img/cerezas_corazon.jpg" alt="Foto de Perfil" >
+                    <h2 class="perfil__name">Paula Gil</h2>
                 
-                En Delicias Naturales, no solo nos enfocamos en tu bienestar, sino también en cuidar del medio ambiente. Adoptamos prácticas sostenibles en todas nuestras operaciones, desde la selección de productos hasta la entrega, para minimizar nuestro impacto ecológico.<br>
-                
-                Te invitamos a descubrir nuestra amplia gama de productos y a formar parte de nuestra comunidad de entusiastas de la alimentación natural. ¡Con Delicias Naturales, disfrutar de lo saludable nunca fue tan fácil!<br>
-                
-                </p>
-            
-        </section>
+                </div>
+    
+                <div class="perfil__details">
+                    <h3 class="perfil__title">Datos Personales</h3>
+                    <p class="perfil__info"><strong>Nombre:</strong> Paula Gil</p>
+                    <p class="perfil__info"><strong>Email:</strong> paula@gmail.com.com</p>
+                    <p class="perfil__info"><strong>Teléfono:</strong> +34 623 456 789</p>
+                    <p class="perfil__info"><strong>Contraseña:</strong> *************</p>
+                    <button class="btn"> Editar <i class="fa-solid fa-pen"></i></button>
+                </div>
+    
+                <div class="perfil__address">
+                    <h3 class="perfil__title">Dirección</h3>
+                    <p class="perfil__info"><strong>Calle:</strong> Calle Santander, 123</p>
+                    <p class="perfil__info"><strong>Ciudad:</strong> Zaragoza</p>
+                    <p class="perfil__info"><strong>Código Postal:</strong> 50010</p>
+                    
+                    <button class="btn"> Modificar Datos <i class="fa-solid fa-pen"></i></button>
+                </div>
+    
+                <div class="perfil__preferences">
+                    <h3 class="perfil__title">Preferencias Seleccionadas</h3>
+                    <ul class="perfil__list">
+                        <li class="perfil__item">Cada semana</li>
+                        <li class="perfil__item">Frutas Orgánicas</li>
+                        <li class="perfil__item">Recibir notificaciones por email</li>
+                        <button class="btn"> Cambiar preferencias <i class="fa-solid fa-pen"></i></button>
+                    </ul>
+                </div>
+    
+                <div class="perfil__orders">
+                    <h3 class="perfil__title">Pedidos Realizados</h3>
+                    <ul class="perfil__list">
+                        <li class="perfil__item">Pedido #123 - 01/01/2024 - Completado</li>
+                        <li class="perfil__item">Pedido #124 - 15/01/2024 - En Proceso</li>
+                        <li class="perfil__item">Pedido #125 - 20/01/2024 - Cancelado</li>
+                        
+                    </ul>
+                </div>
+            </section>
 
-        <section class="contact">
-            <h2 class="section__title">Contáctanos</h2>
-            <p class="section__text">Si tienes alguna pregunta, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
-            <form class="contact__form">
-                <input type="text" placeholder="Tu nombre" required class="contact__input">
-                <input type="email" placeholder="Tu correo" required class="contact__input">
-                <textarea placeholder="Tu mensaje" required class="contact__textarea"></textarea>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </section>
-
-        <section class="map">
-            <h2 class="section__title">Dónde nos puedes encontrar</h2>
-            <div class="map__container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11925.144515002567!2d-0.9212646331834056!3d41.64955953836424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596b3184eba575%3A0x145804a146a743e7!2sDelicias%2C%20Zaragoza!5e0!3m2!1ses!2ses!4v1720888801238!5m2!1ses!2ses" class="map__iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-       
     </main>
 
     <footer class="footer">
@@ -119,7 +134,7 @@
     </footer>
     
 
-    <script src="js/script.js">
+    <script src="#">
 
 const btnScrollToTop = document.getElementById('btnScrollToTop');
 

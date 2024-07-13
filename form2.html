@@ -17,112 +17,114 @@
         rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="prueba.css">
     <title>Formulario 2</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="logo">
+        <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
         </div>
 
-        <!-- MENÚ PRINCIPAL -->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalog.html">Productos</a></li>
-                <li><a href="client.html"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a href="catalog.html">Productos</a></li>
+                <li class="header__nav-item"><a href="client.html"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
             </ul>
         </nav>
 
-        
-
-        <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <input type="checkbox" id="menu-toggle">
-        <nav class="menu-dropdown">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalog.html">Productos</a></li>
-                <li><a href="client.html">Mi Cuenta</a></li>
-                <li><a href="cart.html">Carrito</a></li>
+        <label for="menu-toggle" class="header__menu-icon"><i class="fa fa-bars"></i></label>
+        <input type="checkbox" id="menu-toggle" class="header__menu-toggle">
+        <nav class="header__menu-dropdown">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="index.html">Inicio</a></li>
+                <li class="header__menu-item"><a href="catalog.html">Productos</a></li>
+                <li class="header__menu-item"><a href="client.html">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="cart.html">Carrito</a></li>
             </ul>
         </nav>
 
-        <!-- BOTÓN MODO OSCURO -->
-        <button class="btn-dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
-       
+        <button class="header__btn-dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
     </header>
 
-<main class="bg">
 
-    <div class="formulario-img__2"></div>
-    
-    <section class="registro-formulario">
-        <form action="#" method="get">
-            <h4>¿Cada cuánto quieres recibir el pedido en tu domicilio?</h4>
-            
-            <div class="registro-formulario--period">
-                <label for="semanal">Cada semana</label>
-                <input type="radio" id="semanal" name="tiempo" value="semanal">
-            </div>
-    
-            <div class="registro-formulario--period">
-                <label for="bisemanal">Cada dos semanas</label>
-                <input type="radio" id="bisemanal" name="tiempo" value="bisemanal">
-            </div>
-    
-            <div class="registro-formulario--period">
-                <label for="trisemanal">Cada tres semanas</label>
-                <input type="radio" id="trisemanal" name="tiempo" value="trisemanal">
-            </div>
-    
-            <div class="registro-formulario--period">
-                <label for="mensual">Mensualmente</label>
-                <input type="radio" id="mensual" name="tiempo" value="mensual">
-            </div>
-            
-            <div >
-                <button class="btn" type="submit">Siguiente</button>
-            </div>
-        </form>
-    </section>
-    
-    <button id="btnScrollToTop" class="btn-scroll-top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-</main>
+    <div class="imagen">
+        <h2 class="imagen__title">Empecemos conociendo tus hábitos 1/3</h2>
+    </div>
 
-    
+
+
+    <main class="main">
+        <section class="registro-container">
+            <section class="registro">
+                <form action="#" method="get">
+                    <h4>¿Cada cuánto quieres recibir el pedido en tu domicilio?</h4>
+
+                    <div class="registro__period">
+                        <label for="semanal">Cada semana</label>
+                        <input type="radio" id="semanal" name="tiempo" value="semanal">
+                    </div>
+
+                    <div class="registro__period">
+                        <label for="bisemanal">Cada dos semanas</label>
+                        <input type="radio" id="bisemanal" name="tiempo" value="bisemanal">
+                    </div>
+
+                    <div class="registro__period">
+                        <label for="trisemanal">Cada tres semanas</label>
+                        <input type="radio" id="trisemanal" name="tiempo" value="trisemanal">
+                    </div>
+
+                    <div class="registro__period">
+                        <label for="mensual">Mensualmente <small>(no recomendada para garantizar la frescura de los productos)</small></label>
+                        <input type="radio" id="mensual" name="tiempo" value="mensual">
+                        
+                    </div>
+
+                    <div>
+                        <button class="btn" type="submit">Siguiente</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <button id="btnScrollToTop" class="btn-scroll-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </main>
+
+
 
     <footer class="footer">
-        <div class="footer-1">
-            <div class="box">
-                <figure>
+        <div class="footer__content">
+            <div class="footer__column">
+                <figure class="footer__logo">
                     <a href="#">
                         <img src="img/dn_wh.png" alt="logo">
                     </a>
                 </figure>
             </div>
 
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
+            <div class="footer__column">
+                <h2 class="footer__title">SOBRE NOSOTROS</h2>
+                <p class="footer__text">Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio
+                    diferenciador de compra por Internet</p>
             </div>
 
-            <div class="box">
-                <h2>SÍGUENOS</h2>
-                <div class="rrss">
-                    <a href="#" class="fa-brands fa-facebook" ></a>
-                    <a href="#" class="fa-brands fa-instagram"></a>
-                    <a href="#" class="fa-brands fa-tiktok" ></a>
+            <div class="footer__column">
+                <h2 class="footer__title">SÍGUENOS</h2>
+                <div class="footer__social-icons">
+                    <a href="#" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="#" target="_blank" class="fa-brands fa-instagram"></a>
+                    <a href="#" target="_blank" class="fa-brands fa-tiktok"></a>
                 </div>
             </div>
         </div>
 
-        <div class="footer-2">
+        <div class="footer__rights">
             <small>&copy; 2024 - <b>Delicias Naturales</b> - Todos los derechos reservados.</small>
         </div>
     </footer>

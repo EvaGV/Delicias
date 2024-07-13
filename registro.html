@@ -18,7 +18,7 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="prueba.css">
     
-    <title>Formulario</title>
+    <title>Registro completado</title>
 </head>
 
 <body>
@@ -54,37 +54,25 @@
         <h2 class="imagen__title">Revoluciona tu forma de hacer la compra</h2>
     </div>
 
+
     <main class="main">
-        <section class="registro-container">
-            <section class="registro">
-                <form class="registro__form" action="#" method="get">
-                    <h4 class="registro__heading">EMPIEZA EL CAMBIO</h4>
-                    <label for="nombre" class="registro__label"></label>
-                    <input class="registro__input" type="text" name="nombres" id="nombre" placeholder="Nombre">
-                    <label for="apellidos" class="registro__label"></label>
-                    <input class="registro__input" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-                    <label for="email" class="registro__label"></label>
-                    <input class="registro__input" type="email" name="correo" id="email" placeholder="Correo electrónico">
-                    <label for="contraseña" class="registro__label"></label>
-                    <input class="registro__input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-    
-                    <p class="registro__agreement">Estoy de acuerdo con <a href="#" target="_blank">TyC</a></p>
-                    <input class="btn--next" type="submit" value="Registrarme">
-                    <p class="registro__login"><a href="#" target="_blank">Ya tengo una cuenta</a></p>
-                </form>
-            </section>
-    
-            <div class="fruit-container animate-bounce">
-                <div class="fruit-container__fruit ">
-                    <img src="img/pera.png" alt="Pera">
+        <section class="registro-completado-container">
+            <div class="registro-completado">
+                <h4 class="registro-completado__heading">¡Gracias por registrarte!</h4>
+                <p class="registro-completado__message">Tu cuenta ha sido creada exitosamente.</p>
+                <p class="registro-completado__next-step">Ahora puedes iniciar sesión y disfrutar de nuestros servicios.</p>
+                <a href="login.html" class="btn--next">Iniciar Sesión</a>
+            </div>
+
+            <div class="fruit-container ">
+                <div class="fruit-container__fruit">
+                    <img src="img/kiwi.svg" alt="kiwi">
                 </div>
             </div>
         </section>
+
+   </main>
     
-        <button id="btnScrollToTop" class="scroll-top-btn">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
-    </main>
     
 
     <footer class="footer">

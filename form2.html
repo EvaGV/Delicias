@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="prueba.css">
     <script src="/js/script.js" defer></script>
     <script src="/js/scroll.js" defer></script>
+    <script src="js/menubarras.js"  defer></script>
 
     <title>Formulario 2</title>
 </head>
@@ -37,7 +38,7 @@
                 <li class="header__nav-item"><a href="catalog.html" title="catalogo">Productos</a></li>
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__nav-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+                <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
 
                 <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -52,7 +53,7 @@
                 <li class="header__menu-item"><a href="catalog.html" title="productos">Productos</a></li>
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__menu-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+                <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
 
                 <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
                
@@ -73,7 +74,7 @@
 
 
     <div class="imagen imagen--opcion2">
-        <h2 class="imagen__title">Empecemos conociendo tus hábitos 1/3</h2>
+        <h1 class="imagen__title">Empecemos conociendo tus hábitos 2/5</h1>
     </div>
 
 
@@ -81,7 +82,7 @@
     <main class="main">
         <section class="registro">
                 <form action="#" method="get">
-                    <h1 class="registro__heading">¿CADA CUÁNTO QUIERES RECIBIR EL PEDIDO EN TU DOMICILIO?</h1>
+                    <h2 class="registro__heading">¿CADA CUÁNTO QUIERES RECIBIR EL PEDIDO EN TU DOMICILIO?</h2>
 
                     <div class="registro__period">
                         <label for="semanal">Cada semana</label>
@@ -103,12 +104,19 @@
                         <input type="radio" id="mensual" name="tiempo" value="mensual">
                         
                     </div>
-
-                
-                        <span class="btn" type="submit">Siguiente</span>
-                    
+                    <div class="divbutton">
+                        <button class="btn" type="button" id="anterior"><a href="formulario.html"> Anterior</a></button>
+                        <button class="btn" type="button" id="siguiente"><a href="form3.html"> Siguiente</a></button>
+                    </div>
                 </form>
-            </section>
+
+                <div class="fruit-container animate-bounce">
+                    <div class="fruit-container__fruit">
+                        <img src="img/naranja.svg" alt="Naranja" class="fruit-container__img fruit-container__img--naranja">
+                    </div>
+                </div>
+
+            
         </section>
 
         <button id="btnScrollToTop" class="btn-scroll-top">
@@ -120,7 +128,7 @@
 
     <footer class="footer">
         <div class="footer__content">
-            <div class="footer__column">
+            <!-- <div class="footer__column">
                 <figure class="footer__logo">
                     <a href="contact.html">
                         <img src="img/dn_wh.png" alt="logo">
@@ -132,7 +140,7 @@
                 <h2 class="footer__title">SOBRE NOSOTROS</h2>
                 <p class="footer__text">Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio
                     diferenciador de compra por Internet</p>
-            </div>
+            </div> -->
 
             <div class="footer__column">
                 <div class="footer__social">

@@ -17,6 +17,7 @@
    <script src="/js/recetas.js" defer></script>
    <script src="/js/script.js" defer></script>
    <script src="/js/favoritos.js" defer></script>
+   <script src="/js/menubarras.js" defer></script>
 
    
 
@@ -37,7 +38,7 @@
                 <li class="header__nav-item"><a href="catalog.html" title="catalogo">Productos</a></li>
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__nav-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+                <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
 
                 <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -45,15 +46,15 @@
         </nav>
 
         <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="header__menu-icon"><i class="fa fa-bars"></i></label>
+        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
         
-        <nav class="header__menu-dropdown">
+        <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
                 <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__menu-item"><a href="catalog.html" title="productos">Productos</a></li>
-                <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
-                <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__nav-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+                <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+                <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
+                <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
 
                 <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
                
@@ -243,21 +244,21 @@
     <footer class="footer">
         <div class="footer__content">
             <!-- Columna 1: Logo -->
-            <div class="footer__column">
+            <!-- <div class="footer__column">
                 <div class="footer__logo">
                     <a href="/contact.html">
                         <img src="img/dn_wh.png" alt="logo">
                     </a>
                 </div>
-            </div>
+            </div> -->
     
             <!-- Columna 2: Sobre Nosotros -->
-            <div class="footer__column">
+            <!-- <div class="footer__column">
                 <div class="footer__about">
                     <h2>SOBRE NOSOTROS</h2>
                     <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
                 </div>
-            </div>
+            </div> -->
     
             <!-- Columna 3: Redes Sociales -->
             <div class="footer__column">

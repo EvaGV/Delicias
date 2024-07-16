@@ -17,6 +17,8 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="prueba.css">
+    <script src="/js/script.js" defer></script>
+   <script src="/js/scroll.js" defer></script>
     
     <title>Registro completado</title>
 </head>
@@ -27,28 +29,45 @@
             <img src="img/dn_white.png" alt="logo">
         </div>
 
+        <!-- MENÚ PRINCIPAL -->
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__nav-item"><a href="catalog.html" title="catalogo">Productos</a></li>
-                <li class="header__nav-item"><a href="zusuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
-                <li class="header__nav-item"><a href="cart.html" title="cart"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+                <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
+                <li class="header__nav-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+
+                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                
             </ul>
         </nav>
 
-        <label for="menu-toggle" class="header__menu-icon"><i class="fa fa-bars"></i></label>
-        <input type="checkbox" id="menu-toggle" class="header__menu-toggle">
-        <nav class="header__menu-dropdown">
+        <!-- MENÚ DESPLEGABLE -->
+        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
+        <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="index.html">Inicio</a></li>
-                <li class="header__menu-item"><a href="catalog.html">Productos</a></li>
-                <li class="header__menu-item"><a href="client.html">Mi Cuenta</a></li>
-                <li class="header__menu-item"><a href="cart.html">Carrito</a></li>
+                <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
+                <li class="header__menu-item"><a href="catalog.html" title="productos">Productos</a></li>
+                <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+                <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
+                <li class="header__menu-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+
+                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+               
             </ul>
         </nav>
 
-        <button class="header__btn-dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+        <!-- BOTÓN MODO OSCURO -->
+        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+
+         <!-- BOTÓN SCROLL ARRIBA -->
+         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+        
     </header>
+
 
     <div class="imagen">
         <h2 class="imagen__title">Revoluciona tu forma de hacer la compra</h2>
@@ -56,15 +75,15 @@
 
 
     <main class="main">
-        <section class="registro-completado-container">
-            <div class="registro-completado">
-                <h4 class="registro-completado__heading">¡Gracias por registrarte!</h4>
+        <section class="registro">
+            <div class="registro-form">
+                <h1 class="registro-completado__heading">¡Gracias por registrarte!</h1>
                 <p class="registro-completado__message">Tu cuenta ha sido creada exitosamente.</p>
                 <p class="registro-completado__next-step">Ahora puedes iniciar sesión y disfrutar de nuestros servicios.</p>
-                <a href="login.html" class="btn--next">Iniciar Sesión</a>
+                <a href="login.html" class="btn">Iniciar Sesión</a>
             </div>
 
-            <div class="fruit-container ">
+            <div class="fruit-container animation-hop">
                 <div class="fruit-container__fruit">
                     <img src="img/kiwi.svg" alt="kiwi">
                 </div>
@@ -79,7 +98,7 @@
         <div class="footer__content">
             <div class="footer__column">
                 <figure class="footer__logo">
-                    <a href="#">
+                    <a href="contact.html">
                         <img src="img/dn_wh.png" alt="logo">
                     </a>
                 </figure>
@@ -91,21 +110,19 @@
             </div>
 
             <div class="footer__column">
-                <h2 class="footer__title">SÍGUENOS</h2>
-                <div class="footer__social-icons">
-                    <a href="#" target="_blank" class="fa-brands fa-facebook"></a>
-                    <a href="#" target="_blank" class="fa-brands fa-instagram"></a>
-                    <a href="#" target="_blank" class="fa-brands fa-tiktok"></a>
+                <div class="footer__social">
+                    <h2>SÍGUENOS</h2>
+                    <div class="footer__social--icons">
+                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" target="_blank"></a>
+                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" target="_blank"></a>
+                        <a href="https://www.x.com" class="fa-brands fa-twitter" target="_blank"></a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="footer__rights">
-            <small>&copy; 2024 - <b>Delicias Naturales</b> - Todos los derechos reservados.</small>
-        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+
 </body>
 
 </html>

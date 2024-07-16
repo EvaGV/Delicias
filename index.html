@@ -5,198 +5,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="prueba.css">
+   <script src="/js/script.js" defer></script>
+   <script src="/js/scroll.js" defer></script>
     <title>Inicio</title>
+    
 </head>
 
 <body>
     <header class="header">
-        <div class="logo">
+        <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
         </div>
 
         <!-- MENÚ PRINCIPAL -->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalog.html">Productos</a></li>
-                <li><a href="client.html"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html" title="inicio">Inicio</a></li>
+                <li class="header__nav-item"><a href="catalog.html" title="catalogo">Productos</a></li>
+                <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+                <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
+                <li class="header__nav-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+
+                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                
             </ul>
         </nav>
 
-        
-
         <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <input type="checkbox" id="menu-toggle" />
-        <nav class="menu-dropdown">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalog.html">Productos</a></li>
-                <li><a href="client.html">Mi Cuenta</a></li>
-                <li><a href="cart.html">Carrito</a></li>
+        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
+        <nav class="header__menu-dropdown" id="dropdown-menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
+                <li class="header__menu-item"><a href="catalog.html" title="productos">Productos</a></li>
+                <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+                <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
+                <li class="header__menu-item"><a href="contacto.html" title="nosotros">Sobre nosotros</a></li>
+
+                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+               
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn-dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
-       
+        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+
+         <!-- BOTÓN SCROLL ARRIBA -->
+         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+        
     </header>
 
-    <main class="main">
-        
-        <section class="section-1">
-            <div class="video-container">
-                <video muted autoplay loop poster src="video/fruits.webm"></video>
+    <main>
+        <section class="section section--primary">
+            <div class="section__video-container">
+                <video muted autoplay loop poster="img/varios.jpg" src="video/fruits.webm"></video>
             </div>
-            <div class="text-container">
-                <h2>Descubre Delicias Naturales</h2>
-                <p>
-                    En Delicias Naturales nos esforzamos por ofrecerte lo mejor en frutas frescas y productos naturales directamente. Somos más que una frutería; somos tu aliado en la búsqueda de una vida más saludable y sabrosa. Ubicados en el corazón de Zaragoza, nuestra pasión por la calidad y el servicio nos distingue.
-                </p>
+            <div class="section__text-container">
+                <h2 class="section__title">Descubre Delicias Naturales</h2>
+                <p class="section__text">En Delicias Naturales nos esforzamos por ofrecerte lo mejor en frutas frescas y productos naturales directamente. Somos más que una frutería; somos tu aliado en la búsqueda de una vida más saludable y sabrosa. Ubicados en el corazón de Zaragoza, nuestra pasión por la calidad y el servicio nos distingue.</p>
             </div>
         </section>
-    
-        <section class="section-2">
-            <div class="text-container">
-                <h2>Revoluciona la forma de hacer la compra</h2>
-                <p>
-                    Fundada en el pintoresco barrio de Delicias de Zaragoza, Delicias Naturales ha sido desde sus inicios un referente en la oferta de productos frescos y de calidad. Nuestro compromiso con la comunidad y el medio ambiente nos impulsa a ofrecer una experiencia de compra única y sostenible.
-                </p>
-                
-            </div>
-            <div class="video-container">
-                <video muted autoplay loop poster src="video/fruits2.webm" alt="Vídeo frutas 2"></video>
-            </div>
-        </section>
-    </main>
 
-<!-- Productos Destacados -->
-    <section class="servicios">
-        <h2 class="titulo">PRODUCTOS DESTACADOS</h2>
-            <div class="row">
-                <div class="col-4">
-                    <img src="img/fresas.jpg" alt="imagen fresas">
-                    <h4>Fresas</h4></a>
-                    <div class="rate">
+        <section class="section section--secondary">
+            <div class="section__text-container">
+                <h2 class="section__title">Revoluciona la forma de hacer la compra</h2>
+                <p class="section__text">Fundada en el pintoresco barrio de Delicias de Zaragoza, Delicias Naturales ha sido desde sus inicios un referente en la oferta de productos frescos y de calidad. Nuestro compromiso con la comunidad y el medio ambiente nos impulsa a ofrecer una experiencia de compra única y sostenible.</p>
+            </div>
+            <div class="section__video-container">
+                <video muted autoplay loop poster="img/varios.jpg" src="video/fruits2.webm"></video>
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section class="productos-destacados">
+            <h2 class="productos-destacados__title">SUSCRIPCIONES CON MÁS ÉXITO</h2>
+            <div class="productos-destacados__row">
+                <div class="productos-destacados__col">
+                    <img src="img/cesta1.png" alt="cesta frutas" loading="lazy">
+                    <h4 class="productos-destacados__name">Cesta semananal para 2 personas</h4>
+                    <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
-                    <p>6€/kg</p>
+                    <p class="productos-destacados__price">13€</p>
                 </div>
 
-        <div class="col-4">
-            <img src="img/manzanas.jpg" alt="imagen manzanas">
-            <h4>Manzanas</h4>
-            <div class="rate">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+                <div class="productos-destacados__col">
+                    <img src="img/cesta2.png" alt="cesta frutas" loading="lazy">
+                    <h4 class="productos-destacados__name">Cesta semanal para 4 personas</h4>
+                    <div class="productos-destacados__rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="productos-destacados__price">18€</p>
+                </div>
+
+                <div class="productos-destacados__col">
+                    <img src="img/cesta3.png" alt="cesta frutas" loading="lazy">
+                    <h4 class="productos-destacados__name">Cesta bisemanal para 4 personas</h4>
+                    <div class="productos-destacados__rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <p class="productos-destacados__price">55€</p>
+                </div>
+
+                <div class="productos-destacados__col">
+                    <img src="img/cesta4.png" alt="cesta frutas" loading="lazy">
+                    <h4 class="productos-destacados__name">Cesta bisemanal para 2 personas </h4>
+                    <div class="productos-destacados__rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <p class="productos-destacados__price">30€</p>
+                </div>
             </div>
-            <p>10€/kg</p>
+        </section>
+
+        <article class="frutas">
+
+        </article>
+
+        <span id="btnScrollToTop" class="btn-scroll-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+
+        <!-- Novedad -->
+        <div class="promo">
+            <div class="promo__container">
+                <div class="promo__img">
+                    <img src="img/frutas.png" alt="imagen frutas" loading="lazy">
+                </div>
+                <div class="promo__text">
+                    <p>Dinos tus preferencias cuando crees tu perfil</p>
+                    <h3>AHORRA TIEMPO</h3>
+                    <small>Crea tu cuenta de cliente con tus gustos y preferencias y nosotros nos encargamos de que tengas siempre fruta y verdura en tu domicilio.</small>
+                </div>
+                <a href="/formulario.html" >
+                    <button type="button" class="btn">Quiero suscribirme <i class="fa-solid fa-arrow-right"></i></button>
+                </a>
+                
+            </div>
         </div>
 
-        <div class="col-4">
-            <img src="img/limon.jpg" alt="imagen limón">
-            <h4>Limones</h4>
-            <div class="rate">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>
-            </div>
-            <p>3€/kg</p>
-        </div>
 
-        <div class="col-4">
-            <img src="img/naranjas.jpg" alt="imagen naranjas">
-            <h4>Naranajas</h4>
-            <div class="rate">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i>
-            </div>
-            <p>4.5€/kg</p>
-        </div>
-    </div>
-
-    </section>
-
-
-    <!------ Novedad ------->
-
-<div class="new">
-    <div class="servicios">
-        <div class="row">
-            <div class="col-2">
-                <img class="img-oferta" src="img/frutas.png" alt="imagen frutas">
-            </div>
-            <div class="col-2">
-                <p>Dinos tus preferencias cuando crees tu perfil</p>
-                <h3>AHORRA TIEMPO</h3>
-                <small>Crea tu cuenta de cliente con tus gustos y preferencias y nosotros nos encargamos de que tengas siempre fruta y verdura en tu domicilio.</small>
-            </div>
-            <button class="btn" src="form.html">Quiero hacerme cliente <i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-</div>
-
-<button id="btnScrollToTop" class="btn-scroll-top">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
-    
-    
+       
+    </main>
 
     <footer class="footer">
-        <div class="footer-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
+        <div class="footer__content">
+            <!-- Columna 1: Logo -->
+            <div class="footer__column">
+                <div class="footer__logo">
+                    <a href="contact.html">
                         <img src="img/dn_wh.png" alt="logo">
                     </a>
-                </figure>
+                </div>
             </div>
-
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
+    
+            <!-- Columna 2: Sobre Nosotros -->
+            <div class="footer__column">
+                <div class="footer__about">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
+                </div>
             </div>
-
-            <div class="box">
-                <h2>SÍGUENOS</h2>
-                <div class="rrss">
-                    <a href="#" class="fa-brands fa-facebook" ></a>
-                    <a href="#" class="fa-brands fa-instagram" ></a>
-                    <a href="#" class="fa-brands fa-tiktok"></a>
+    
+            <!-- Columna 3: Redes Sociales -->
+            <div class="footer__column">
+                <div class="footer__social">
+                    <h2>SÍGUENOS</h2>
+                    <div class="footer__social--icons">
+                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" target="_blank"></a>
+                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" target="_blank"></a>
+                        <a href="https://www.x.com" class="fa-brands fa-twitter" target="_blank"></a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="footer-2">
-            <small>&copy; 2024 - <b>Delicias Naturales</b> - Todos los derechos reservados.</small>
-        </div>
     </footer>
+    
 
-    <script src="js/script.js"></script>
+
 </body>
 
 </html>

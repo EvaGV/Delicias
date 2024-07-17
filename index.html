@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="/css/style.css">
    <script src="/js/script.js" defer></script>
    <script src="/js/scroll.js" defer></script>
-   <script src="js/menubarras.js" defer></script>
+   <script src="/js/menubarras.js" defer></script>
+   <script src="/js/botones.js" defer></script>
+
     <title>Inicio</title>
     
 </head>
@@ -39,22 +41,22 @@
         </nav>
 
         <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
-        <nav class="header__menu-dropdown" id="dropdown-menu">
+        <button class="header__menu-icon" id="menu-toggle" title="botón"><i class="fa fa-bars"></i></button>
+    <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
                 <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
 
-         <!-- BOTÓN SCROLL ARRIBA -->
-         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
+          <!-- BOTÓN SCROLL ARRIBA -->
+        <span id="btnScrollToTop" class="btn-scroll-top" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
@@ -66,7 +68,7 @@
                 <video muted autoplay loop poster="img/varios.jpg" src="video/fruits.webm"></video>
             </div>
             <div class="section__text-container">
-                <h2 class="section__title">Descubre Delicias Naturales</h2>
+                <h1 class="section__title">Descubre Delicias Naturales</h1>
                 <p class="section__text">En Delicias Naturales nos esforzamos por ofrecerte lo mejor en frutas frescas y productos naturales directamente. Somos más que una frutería; somos tu aliado en la búsqueda de una vida más saludable y sabrosa. Ubicados en el corazón de Zaragoza, nuestra pasión por la calidad y el servicio nos distingue.</p>
             </div>
         </section>
@@ -82,7 +84,7 @@
         </section>
 
         <!-- Productos Destacados -->
-        <section class="productos-destacados">
+        <article class="productos-destacados">
             <h2 class="productos-destacados__title">SUSCRIPCIONES CON MÁS ÉXITO</h2>
             <div class="productos-destacados__row">
                 <div class="productos-destacados__col">
@@ -137,18 +139,11 @@
                     <p class="productos-destacados__price">30€</p>
                 </div>
             </div>
-        </section>
-
-        <article class="frutas">
-
         </article>
 
-        <span id="btnScrollToTop" class="btn-scroll-top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </span>
 
         <!-- Novedad -->
-        <div class="promo">
+        <article class="promo">
             <div class="promo__container">
                 <div class="promo__img">
                     <img src="img/frutas.png" alt="imagen frutas" loading="lazy">
@@ -158,51 +153,29 @@
                     <h3>AHORRA TIEMPO</h3>
                     <small>Crea tu cuenta de cliente con tus gustos y preferencias y nosotros nos encargamos de que tengas siempre fruta y verdura en tu domicilio.</small>
                 </div>
-                <a href="/formulario.html" >
-                    <button type="button" class="btn">Quiero rellenar los formularios <i class="fa-solid fa-arrow-right"></i></button>
-                </a>
+                
+                <button class="btn" type="button" id="formulario" title="botón"> Quiero rellenar los formularios <i class="fa-solid fa-arrow-right"></i></button>
+                
                 
             </div>
-        </div>
+        </article>
 
 
        
     </main>
 
     <footer class="footer">
-        <div class="footer__content">
-            <!-- Columna 1: Logo -->
-            <!-- <div class="footer__column">
-                <div class="footer__logo">
-                    <a href="contact.html">
-                        <img src="img/dn_wh.png" alt="logo">
-                    </a>
-                </div>
-            </div> -->
-    
-            <!-- Columna 2: Sobre Nosotros -->
-            <!-- <div class="footer__column">
-                <div class="footer__about">
-                    <h2>SOBRE NOSOTROS</h2>
-                    <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
-                </div>
-            </div> -->
-    
-            <!-- Columna 3: Redes Sociales -->
-            <div class="footer__column">
+        <div class="footer__content">    
                 <div class="footer__social">
                     <h2>SÍGUENOS</h2>
                     <div class="footer__social--icons">
-                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" target="_blank"></a>
-                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" target="_blank"></a>
-                        <a href="https://www.x.com" class="fa-brands fa-twitter" target="_blank"></a>
+                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" title="facebook" target="_blank" rel="no-referrer"></a>
+                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" title="instagram" target="_blank" rel="no-referrer"></a>
+                        <a href="https://www.x.com" class="fa-brands fa-twitter" title="x" target="_blank" rel="no-referrer"></a>
                     </div>
                 </div>
-            </div>
         </div>
     </footer>
-    
-
 
 </body>
 

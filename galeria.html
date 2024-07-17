@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -40,29 +40,25 @@
         </nav>
 
         <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
-        <nav class="header__menu-dropdown" id="dropdown-menu">
+        <button class="header__menu-icon" id="menu-toggle" title="botón"><i class="fa fa-bars"></i></button>
+    <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
                 <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
 
-         <!-- BOTÓN SCROLL ARRIBA -->
-         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
+          <!-- BOTÓN SCROLL ARRIBA -->
+        <span id="btnScrollToTop" class="btn-scroll-top" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
 
-         <!-- BOTÓN SCROLL ARRIBA -->
-         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
-            <i class="fa-solid fa-arrow-up"></i>
-        </span>
     </header>
 
     <main class="main-slider">
@@ -95,10 +91,10 @@
                 </div>
             </div>
 
-            <button class="slider__arrow slider__arrow--left" id="prevBtn">
+            <button class="slider__arrow slider__arrow--left" id="prevBtn" title="botón">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="slider__arrow slider__arrow--right" id="nextBtn">
+            <button class="slider__arrow slider__arrow--right" id="nextBtn" title="botón">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>  
 
@@ -107,40 +103,18 @@
     
 
     <footer class="footer">
-        <div class="footer__content">
-            <!-- Columna 1: Logo -->
-            <!-- <div class="footer__column">
-                <div class="footer__logo">
-                    <a href="contact.html">
-                        <img src="img/dn_wh.png" alt="logo">
-                    </a>
-                </div>
-            </div> -->
-    
-            <!-- Columna 2: Sobre Nosotros -->
-            <!-- <div class="footer__column">
-                <div class="footer__about">
-                    <h2>SOBRE NOSOTROS</h2>
-                    <p>Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
-                </div>
-            </div> -->
-    
-            <!-- Columna 3: Redes Sociales -->
-            <div class="footer__column">
+        <div class="footer__content">    
                 <div class="footer__social">
                     <h2>SÍGUENOS</h2>
                     <div class="footer__social--icons">
-                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" target="_blank"></a>
-                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" target="_blank"></a>
-                        <a href="https://www.x.com" class="fa-brands fa-twitter" target="_blank"></a>
+                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" title="facebook" target="_blank" rel="no-referrer"></a>
+                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" title="instagram" target="_blank" rel="no-referrer"></a>
+                        <a href="https://www.x.com" class="fa-brands fa-twitter" title="x" target="_blank" rel="no-referrer"></a>
                     </div>
                 </div>
-            </div>
         </div>
     </footer>
-    
 
-  
 </body>
 
 </html>

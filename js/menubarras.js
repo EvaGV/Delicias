@@ -2,13 +2,10 @@ const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
 function toggleMenu() {
-    // Solo cambiar el estado si el menú principal está oculto
-    if (window.innerWidth <= 768) {
-        dropdownMenu.classList.toggle('show');
-    }
+    dropdownMenu.classList.toggle('show');
 }
 
-// Añadir evento de clic al icono del menú
+// Añadir evento de clic al botón del menú
 menuToggle.addEventListener('click', toggleMenu);
 
 // Cerrar el menú al hacer clic en un enlace

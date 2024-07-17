@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js" defer></script>
    <script src="/js/scroll.js" defer></script>
-   <script src="js/menubarras.js"  defer></script>
+   <script src="/js/botones.js" defer></script>
     
     <title>Registro completado</title>
 </head>
@@ -42,22 +42,22 @@
         </nav>
 
         <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
-        <nav class="header__menu-dropdown" id="dropdown-menu">
+        <button class="header__menu-icon" id="menu-toggle" title="botón"><i class="fa fa-bars"></i></button>
+    <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
                 <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
 
          <!-- BOTÓN SCROLL ARRIBA -->
-         <span id="btnScrollToTop" class="btn-scroll-top" style="display: none;">
+         <span id="btnScrollToTop" class="btn-scroll-top" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
@@ -72,14 +72,15 @@
     <main class="main">
         <section class="registro">
             <div class="registro-form">
-                <h1 class="registro-completado__heading">¡Gracias por registrarte!</h1>
+                <h2 class="registro-completado__heading">¡Gracias por registrarte!</h2>
                 <p class="registro-completado__message">Tu cuenta ha sido creada exitosamente.</p>
                 <p class="registro-completado__next-step">Ahora puedes iniciar sesión y disfrutar de nuestros servicios.</p>
-                <a href="/formulario.html" class="btn">Iniciar Sesión</a>
+                <!-- <a href="/formulario.html" class="btn">Iniciar Sesión</a> -->
+                <button class="btn" type="button" id="usuario" title="botón">Iniciar Sesión</button>
             </div>
 
             <div class="fruit-container animation-hop">
-                <div class="fruit-container__img" class="fruit-container__img--kiwi">
+                <div class="fruit-container__img fruit-container__img--kiwi">
                     <img src="img/kiwi.svg" alt="kiwi">
                 </div>
             </div>
@@ -87,37 +88,18 @@
 
    </main>
     
-    
-
-    <footer class="footer">
-        <div class="footer__content">
-            <!-- <div class="footer__column">
-                <figure class="footer__logo">
-                    <a href="contact.html">
-                        <img src="img/dn_wh.png" alt="logo">
-                    </a>
-                </figure>
-            </div>
-
-            <div class="footer__column">
-                <h2 class="footer__title">SOBRE NOSOTROS</h2>
-                <p class="footer__text">Frutería del barrio Delicias de Zaragoza donde ofrecemos un servicio diferenciador de compra por Internet</p>
-            </div> -->
-
-            <div class="footer__column">
-                <div class="footer__social">
-                    <h2>SÍGUENOS</h2>
-                    <div class="footer__social--icons">
-                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" target="_blank"></a>
-                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" target="_blank"></a>
-                        <a href="https://www.x.com" class="fa-brands fa-twitter" target="_blank"></a>
-                    </div>
+   <footer class="footer">
+    <div class="footer__content">    
+            <div class="footer__social">
+                <h2>SÍGUENOS</h2>
+                <div class="footer__social--icons">
+                    <a href="https://www.facebook.com" class="fa-brands fa-facebook" title="facebook" target="_blank" rel="no-referrer"></a>
+                    <a href="https://www.instagram.com" class="fa-brands fa-instagram" title="instagram" target="_blank" rel="no-referrer"></a>
+                    <a href="https://www.x.com" class="fa-brands fa-twitter" title="x" target="_blank" rel="no-referrer"></a>
                 </div>
             </div>
-        </div>
-    </footer>
-
-
+    </div>
+</footer>
 </body>
 
 </html>

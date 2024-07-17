@@ -20,8 +20,9 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         alert("Las contraseñas no coinciden. Inténtalo de nuevo.");
         return;
     }
+    // Event Listener para registrarse
 
-    // Aquí puedes agregar cualquier otra validación que necesites
+
 
     // Si todo es correcto, enviar el formulario (puedes hacer una llamada AJAX o simplemente enviar el formulario)
     alert("Formulario enviado con éxito!");

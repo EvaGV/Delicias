@@ -1176,7 +1176,6 @@ __________________________ */
     display: none; /* Oculta las imágenes */
 }
 
-
 .btn-scroll-top {
     position: fixed;
     bottom: 20px;
@@ -1184,19 +1183,15 @@ __________________________ */
     background-color: var(--color-primary);
     color: var(--text-primary);
     border: 1px solid var(--color-secondary);
-   
     padding: 10px;
     cursor: pointer;
     display: none; /* Oculto por defecto */
-    
 }
 
 .btn-scroll-top:hover {
     background-color: var(--color-secondary);
     border: 1px solid var(--color-primary);
 }
-
-
 
 
 /* 1. Dispositivos móviles (320px - 480px) */

@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 @font-face {
     font-family: "Unbounded";
     src: url("../fonts/Unbounded-Bold.ttf") format('truetype');
@@ -20,7 +19,6 @@
     --color-secondary: #325407;
     --text-primary: #fff;
     --text-secondary: #000;
-    
 }
 
 .u-darkmode {
@@ -30,6 +28,7 @@
    --text-secondary: #fffdbe;
 
 }
+
 h1, h2, h3, h4 {
     font-family: "Unbounded";
 }
@@ -42,6 +41,7 @@ html{
     display: flex;
     flex-direction: column;
 }
+
 body, html {
     font-family: 'Red Hat Text', sans-serif;
     line-height: 1.5;
@@ -51,7 +51,7 @@ body, html {
 }
 
 .btn,
-.btn--next {
+.btn--next /*creo que hay que eliminarlo*/{
     background-color: var(--color-secondary);
     color: var(--text-primary);
     padding: 1rem 2rem;
@@ -69,12 +69,12 @@ body, html {
     font-size: 1.1em;
 }
 
-.btn--next:hover {
+/* .btn--next:hover {
     background-color: #a0c175;
     border: 1px solid #325407;
     color: var(--color-secondary);
 
-}
+} */
 
 .btn--dark{
     font-size: 1em;
@@ -244,7 +244,6 @@ body, html {
 
 .section__text {
     font-size: 1.2rem;
-    
 }
 
 
@@ -286,14 +285,10 @@ body, html {
     /* Limitar la altura máxima para evitar el desbordamiento */
 }
 
-
 .productos-destacados__name {
     font-size: 1rem;
     margin: 1rem 0;
-    
 }
-
-
 
 .productos-destacados__rate i {
     color: var(--color-primary);
@@ -333,7 +328,6 @@ body, html {
 .promo__btn i {
     margin-left: 0.5rem;
 }
-
 
 
 /* Footer */
@@ -630,7 +624,6 @@ _______________________ */
     position: relative;
 }
 
-
 .imagen--opcion {
     background-image: url(/img/varios2.jpg);
 }
@@ -810,7 +803,9 @@ _______________________ */
 
 
 
-/* _-______________ formulario 3 */
+/* _-______________ 
+formulario 3 
+__________________*/
 
 
 .registro__form {
@@ -875,7 +870,6 @@ _______________________*/
     flex-direction: column;
     align-items: center;
     width: 100%;
-   
 }
 
 .about {
@@ -887,7 +881,6 @@ _______________________*/
 
 .map {
     background-image: url(/img/frambuesa.svg);
-
 }
 
 .about,
@@ -901,7 +894,6 @@ _______________________*/
     max-width: 1200px; /* Ancho máximo para las secciones */
     margin-left: auto; /* Centrar las secciones */
     margin-right: auto; /* Centrar las secciones */
-
 }
 
 .contact__form {
@@ -910,7 +902,6 @@ _______________________*/
     align-items: center;
     max-width: 400px;
     margin: 0 auto;
-
 }
 
 .contact__input,
@@ -931,7 +922,6 @@ _______________________*/
     margin: 2rem auto;
     width: 100%;
     max-width: 800px;
-
 }
 
 .map__iframe {
@@ -941,7 +931,6 @@ _______________________*/
     /* Altura por defecto */
     border: 0;
     /* Sin bordes */
-
 }
 
 
@@ -1024,7 +1013,6 @@ _______________________*/
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 30px;
-    
 }
 
 .receta__contador {
@@ -1036,8 +1024,6 @@ _______________________*/
 .receta__favoritos:hover {
     background-color: var(--color-primary);
 }
-
-
 
 .receta__leer {
     color: var(--color-primary);
@@ -1087,7 +1073,6 @@ _______________________*/
     margin: 0 auto 80px;
     display: flex;
     justify-content: center;
-
 }
 
 .paginas span {

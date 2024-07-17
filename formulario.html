@@ -16,10 +16,12 @@
         rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="prueba.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js" defer></script>
    <script src="/js/scroll.js" defer></script>
-   <script src="js/menubarras.js"  defer></script>
+   <script src="/js/menubarras.js" defer></script>
+   <script src="/js/formulario.js" defer></script>
+
     
     <title>Formulario</title>
 </head>
@@ -30,34 +32,28 @@
             <img src="img/dn_white.png" alt="logo">
         </div>
 
-        <!-- MENÚ PRINCIPAL -->
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="index.html" title="inicio">Inicio</a></li>
-                <li class="header__nav-item"><a href="catalog.html" title="catalogo">Productos</a></li>
-                <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
-                <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
+       <!-- MENÚ PRINCIPAL -->
+       <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="index.html" title="inicio">Inicio</a></li>
+            <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+            <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
+            <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
+            <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
 
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
-                
-            </ul>
-        </nav>
-
-        <!-- MENÚ DESPLEGABLE -->
-        <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
-        <nav class="header__menu-dropdown" id="dropdown-menu">
-            <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
-                <li class="header__menu-item"><a href="catalog.html" title="productos">Productos</a></li>
-                <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
-                <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
-                <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-
-                <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
-               
-            </ul>
-        </nav>
+    <!-- MENÚ DESPLEGABLE -->
+    <label for="menu-toggle" class="header__menu-icon" id="menu-toggle"><i class="fa fa-bars"></i></label>
+    <nav class="header__menu-dropdown" id="dropdown-menu">
+        <ul class="header__menu-list">
+            <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
+            <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
+            <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
+            <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
+            <li class="header__menu-item"><a href="client.html" title="perfil">Mi Cuenta</a></li>
+        </ul>
+    </nav>
 
         <!-- BOTÓN MODO OSCURO -->
         <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></button>
@@ -76,41 +72,38 @@
     </div>
 
     <main class="main">
+        
         <section class="registro">
-                <form  action="#" method="get">
-                    <h2 class="registro__heading">EMPIEZA EL CAMBIO</h2>
-                    <label for="nombre" class="registro__label"></label>
-                    <input class="registro__input" type="text" name="nombres" id="nombre" placeholder="Nombre">
-                    
-                    <label for="apellidos" class="registro__label"></label>
-                    <input class="registro__input" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-
-                    <label for="email" class="registro__label"></label>
-                    <input class="registro__input" type="email" name="correo" id="email" placeholder="Correo electrónico">
-
-                    <label for="contraseña" class="registro__label"></label>
-                    <input class="registro__input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-
+            <form id="registrationForm" action="#" method="get">
+                <h2 class="registro__heading">EMPIEZA EL CAMBIO</h2>
+                
+                <label for="nombre" class="registro__label"></label>
+                <input class="registro__input" type="text" name="nombres" id="nombre" placeholder="Nombre" required>
+                
+                <label for="apellidos" class="registro__label"></label>
+                <input class="registro__input" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
     
-                    <p class="registro__agreement">Estoy de acuerdo con <a href="#" target="_blank">TyC</a></p>
-
-                    <input class="btn" type="submit" value="Registrarme">
-
-                    <p class="registro__login"><a href="form2.html" target="_blank">Ya tengo una cuenta</a></p>
-                </form>
-
-                <div class="fruit-container animate-bounce">
-                    <div class="fruit-container__img ">
-                        <img src="img/pera.png" alt="Pera">
-                    </div>
+                <label for="email" class="registro__label"></label>
+                <input class="registro__input" type="email" name="correo" id="email" placeholder="Correo electrónico" required>
+    
+                <label for="contraseña" class="registro__label"></label>
+                <input class="registro__input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+    
+                <label for="confirmar-contraseña" class="registro__label"></label>
+                <input class="registro__input" type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirmar Contraseña" required>
+    
+                <p class="registro__agreement">Estoy de acuerdo con <a href="#" target="_blank">TyC</a></p>
+    
+                <button class="btn" type="submit" value="Registrarme" id="registrarme"><a href="form2.html">Registrarme</a></button>
+                <p class="registro__login">Ya tengo una cuenta</a></p>
+            </form>
+    
+            <div class="fruit-container animate-bounce">
+                <div class="fruit-container__fruit">
+                    <img src="img/pera.png" alt="pera" class="fruit-container__img fruit-container__img--pera">
                 </div>
-
-            </section>
-    
-            
+            </div>
         </section>
-    
-       
     </main>
     
 

@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+  
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/menubarras.js"  defer></script>
-   <script src="/js/botones.js" defer></script>
+
+    <!-- JavaScript -->
+   <script src="js/script.js" defer></script>
+   <script src="js/scroll.js" defer></script>
+   <script src="js/menubarras.js"  defer></script>
+   <script src="js/botones.js" defer></script>
+   <script src="js/usuario.js" defer></script>
     
    <title>Usuario</title>
     
@@ -36,7 +39,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -48,44 +51,45 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
         <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
 
     </header>
 
-
+<!-- En esta página aparece en la cabecera de la caja la foto y nombre del usuario y luego diferentes apartados con información diferente y botones para 
+ cambiar, que no funcionan-->
     <main class="main-usuario">
         
             <section class="registro">
                 <div class="perfil">
                     <div class="perfil__img">
-                    <img class="perfil__foto" src="img/cerezas_corazon.jpg" alt="Foto de Perfil" >
+                    <img class="perfil__foto" src="img/cerezas_corazon.webp" alt="Foto de Perfil" >
                     <div class="perfil__camara" id="perfilCamara"><i class="fa-solid fa-camera"></i>
                         <input type="file" id="cambiar" class="perfil__cambiar" accept="image/*">
                     </div>
                 </div>
-                <h2 class="perfil__name">Paula Gil</h2>
+                <h2 class="perfil__name">Paula Peralta</h2>
                 </div>
     
-                <div class="perfil__preferences">
+                <div class="perfil__preferencias">
                     <h3 class="perfil__title">Datos Personales</h3>
-                    <p class="perfil__info"><strong>Nombre:</strong> Paula Gil</p>
+                    <p class="perfil__info"><strong>Nombre:</strong> Paula Peralta</p>
                     <p class="perfil__info"><strong>Email:</strong> paula@gmail.com.com</p>
                     <p class="perfil__info"><strong>Teléfono:</strong> +34 623 456 789</p>
                     <p class="perfil__info"><strong>Contraseña:</strong> *************</p>
                     <button class="btn" title="botón"> Editar <i class="fa-solid fa-pen"></i></button>
                 </div>
 
-                <div class="perfil__preferences">
+                <div class="perfil__preferencias">
                     <h3 class="perfil__title">Tarjeta de Crédito</h3>
                     <p class="perfil__info"><strong>Número:</strong> **** **** **** 1234</p>
                     <p class="perfil__info"><strong>Fecha de Expiración:</strong> 12/25</p>
@@ -93,7 +97,7 @@
                     <button class="btn" title="botón"> Modificar Tarjeta <i class="fa-solid fa-pen"></i></button>
                 </div>
     
-                <div class="perfil__preferences">
+                <div class="perfil__preferencias">
                     <h3 class="perfil__title">Dirección</h3>
                     <p class="perfil__info"><strong>Calle:</strong> Calle Santander, 123</p>
                     <p class="perfil__info"><strong>Ciudad:</strong> Zaragoza</p>
@@ -102,9 +106,9 @@
                     <button class="btn" title="botón"> Modificar Datos <i class="fa-solid fa-pen"></i></button>
                 </div>
     
-                <div class="perfil__preferences">
+                <div class="perfil__preferencias">
                     <h3 class="perfil__title">Preferencias Seleccionadas</h3>
-                    <ul class="perfil__list">
+                    <ul class="perfil__lista">
                         <li class="perfil__item">Cada semana</li>
                         <li class="perfil__item">Frutas Orgánicas</li>
                         <li class="perfil__item">Recibir notificaciones por email</li>
@@ -112,15 +116,15 @@
                     <button class="btn" title="botón"> Cambiar preferencias <i class="fa-solid fa-pen"></i></button>
                 </div>
     
-                <div class="perfil__preferences">
+                <div class="perfil__preferencias">
                     <h3 class="perfil__title">Pedidos Realizados</h3>
-                    <ul class="perfil__list">
+                    <ul class="perfil__lista">
                         <li class="perfil__item">Pedido #123 - 01/01/2024 - Completado - 25€</li>
                         <li class="perfil__item">Pedido #124 - 15/01/2024 - En Proceso - 25€</li>
                         <li class="perfil__item">Pedido #125 - 20/01/2024 - Cancelado</li>
                     </ul>
 
-                    <div class="perfil__preferences">
+                    <div class="perfil__preferencias">
                         <button class="btn" title="botón"> Modificar Suscripción <i class="fa-solid fa-pen"></i></button>
                         <button class="btn btn--cancelar" title="botón">Cancelar Suscripción</button>
                     </div>

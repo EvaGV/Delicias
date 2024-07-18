@@ -3,27 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta name="inicio" content="width=device-width, initial-scale=1.0">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/menubarras.js" defer></script>
-   <script src="/js/botones.js" defer></script>
+
+    <!-- JavaScript -->
+   <script defer src="js/script.js"></script>
+   <script defer src="js/scroll.js"></script>
+   <script defer src="js/menubarras.js"></script>
+   <script defer src="js/botones.js"></script>
 
     <title>Inicio</title>
     
 </head>
 
 <body>
+    <!-- Imagen Header -->
     <header class="header">
         <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
@@ -36,7 +38,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -48,48 +50,50 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
           <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
     </header>
 
+<!-- La página de inicio está divida en varias secciones. Las dos primeras contienen un video que se reproduce en bucle y le he puesto la 
+ propiedad poster para que si no carga se vea una imagen y además, tiene un título y un texto -->
     <main>
-        <section class="section section--primary">
-            <div class="section__video-container">
-                <video muted autoplay loop poster="img/varios.jpg" src="video/fruits.webm"></video>
+        <section class="seccion seccion--primera">
+            <div class="seccion__video-contenedor">
+                <video muted autoplay loop poster="img/varios.webp" src="video/fruits.webm"></video>
             </div>
-            <div class="section__text-container">
-                <h1 class="section__title">Descubre Delicias Naturales</h1>
-                <p class="section__text">En Delicias Naturales nos esforzamos por ofrecerte lo mejor en frutas frescas y productos naturales directamente. Somos más que una frutería; somos tu aliado en la búsqueda de una vida más saludable y sabrosa. Ubicados en el corazón de Zaragoza, nuestra pasión por la calidad y el servicio nos distingue.</p>
-            </div>
-        </section>
-
-        <section class="section section--secondary">
-            <div class="section__text-container">
-                <h2 class="section__title">Revoluciona la forma de hacer la compra</h2>
-                <p class="section__text">Fundada en el pintoresco barrio de Delicias de Zaragoza, Delicias Naturales ha sido desde sus inicios un referente en la oferta de productos frescos y de calidad. Nuestro compromiso con la comunidad y el medio ambiente nos impulsa a ofrecer una experiencia de compra única y sostenible.</p>
-            </div>
-            <div class="section__video-container">
-                <video muted autoplay loop poster="img/varios.jpg" src="video/fruits2.webm"></video>
+            <div class="seccion__text-contenedor">
+                <h1 class="seccion__title">Descubre Delicias Naturales</h1>
+                <p class="seccion__text">En Delicias Naturales nos esforzamos por ofrecerte lo mejor en frutas frescas y productos naturales directamente. Somos más que una frutería; somos tu aliado en la búsqueda de una vida más saludable y sabrosa. Ubicados en el corazón de Zaragoza, nuestra pasión por la calidad y el servicio nos distingue.</p>
             </div>
         </section>
 
-        <!-- Productos Destacados -->
-        <article class="productos-destacados">
+        <section class="seccion seccion--segunda">
+            <div class="seccion__text-contenedor">
+                <h2 class="seccion__title">Revoluciona la forma de hacer la compra</h2>
+                <p class="seccion__text">Fundada en el pintoresco barrio de Delicias de Zaragoza, Delicias Naturales ha sido desde sus inicios un referente en la oferta de productos frescos y de calidad. Nuestro compromiso con la comunidad y el medio ambiente nos impulsa a ofrecer una experiencia de compra única y sostenible.</p>
+            </div>
+            <div class="seccion__video-contenedor">
+                <video muted autoplay loop poster="img/varios.webp" src="video/fruits2.webm"></video>
+            </div>
+        </section>
+
+        <!-- Productos Destacados. Aquí he puesto 4 contenedores con funcionalidades hover-->
+        <section class="productos-destacados">
             <h2 class="productos-destacados__title">SUSCRIPCIONES CON MÁS ÉXITO</h2>
-            <div class="productos-destacados__row">
+            <div class="productos-destacados__fila">
                 <div class="productos-destacados__col">
-                    <img src="img/cesta1.png" alt="cesta frutas" loading="lazy">
-                    <h4 class="productos-destacados__name">Cesta semananal para 2 personas</h4>
+                    <img src="img/cesta.webp" alt="cesta frutas" loading="lazy">
+                    <h3 class="productos-destacados__name">Cesta semananal para 2 personas</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -97,12 +101,24 @@
                         <i class="fa fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
-                    <p class="productos-destacados__price">13€</p>
+                    <p class="productos-destacados__price">18€</p>
+
+                    <div class="productos-destacados__info">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>1.5kg de fruta variada de temporada</li>
+                            <li>2kg de verdura variada de temporada</li>
+                            <li>(cantidades aproximadas en función de los productos)</li>
+                        
+                        </ul>
+                        <button class="btn" type="button" id="cesta" title="botón"> Yo también quiero </button>
+                    </div>
+
                 </div>
 
                 <div class="productos-destacados__col">
-                    <img src="img/cesta2.png" alt="cesta frutas" loading="lazy">
-                    <h4 class="productos-destacados__name">Cesta semanal para 4 personas</h4>
+                    <img src="img/cesta2.webp" alt="cesta frutas" loading="lazy">
+                    <h3 class="productos-destacados__name">Cesta semanal para 4 personas</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -110,12 +126,22 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <p class="productos-destacados__price">18€</p>
+                    <p class="productos-destacados__price">28€</p>
+
+                    <div class="productos-destacados__info">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>3kg de fruta variada de temporada</li>
+                            <li>4kg de verdura variada de temporada</li>
+                            <li>(cantidades aproximadas en función de los productos)</li>
+                        </ul>
+                        <button class="btn" type="button" id="cesta2" title="botón"> Yo también quiero </button>
+                    </div>
                 </div>
 
                 <div class="productos-destacados__col">
-                    <img src="img/cesta3.png" alt="cesta frutas" loading="lazy">
-                    <h4 class="productos-destacados__name">Cesta bisemanal para 4 personas</h4>
+                    <img src="img/cesta3.webp" alt="cesta frutas" loading="lazy">
+                    <h3 class="productos-destacados__name">Cesta bisemanal para 4 personas</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -124,11 +150,21 @@
                         <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
                     <p class="productos-destacados__price">55€</p>
+
+                    <div class="productos-destacados__info">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>6kg de fruta variada de temporada</li>
+                            <li>8kg de verdura variada de temporada</li>
+                            <li>(cantidades aproximadas en función de los productos)</li>
+                        </ul>
+                        <button class="btn" type="button" id="cesta3" title="botón"> Yo también quiero </button>
+                    </div>
                 </div>
 
                 <div class="productos-destacados__col">
-                    <img src="img/cesta4.png" alt="cesta frutas" loading="lazy">
-                    <h4 class="productos-destacados__name">Cesta bisemanal para 2 personas </h4>
+                    <img src="img/cesta4.webp" alt="cesta frutas" loading="lazy">
+                    <h3 class="productos-destacados__name">Cesta bisemanal para 2 personas </h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -136,19 +172,29 @@
                         <i class="fa fa-star"></i>
                         <i class="fa-regular fa-star-half-stroke"></i>
                     </div>
-                    <p class="productos-destacados__price">30€</p>
+                    <p class="productos-destacados__price">35€</p>
+
+                    <div class="productos-destacados__info">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>4.5kg de fruta variada de temporada</li>
+                            <li>6kg de verdura variada de temporada</li>
+                            <li>(cantidades aproximadas en función de los productos)</li>
+                        </ul>
+                        <button class="btn" type="button" id="cesta4" title="botón"> Yo también quiero </button>
+                    </div>
                 </div>
             </div>
-        </article>
+        </section>
 
 
-        <!-- Novedad -->
-        <article class="promo">
-            <div class="promo__container">
-                <div class="promo__img">
+        <!-- Ahorra Tiempo. En esta sección aparece una imagen, un texto y un botón para empezar a completar el formulario para hacerse cliente -->
+        <section class="tiempo">
+            <div class="tiempo__container">
+                <div class="tiempo__img">
                     <img src="img/frutas.png" alt="imagen frutas" loading="lazy">
                 </div>
-                <div class="promo__text">
+                <div class="tiempo__text">
                     <p>Rellena los formularios que te planteados y</p>
                     <h3>AHORRA TIEMPO</h3>
                     <small>Crea tu cuenta de cliente con tus gustos y preferencias y nosotros nos encargamos de que tengas siempre fruta y verdura en tu domicilio.</small>
@@ -156,13 +202,11 @@
                 
                 <button class="btn" type="button" id="formulario" title="botón"> Quiero rellenar los formularios <i class="fa-solid fa-arrow-right"></i></button>
                 
-                
             </div>
-        </article>
+        </section>
 
-
-       
     </main>
+    <!-- Footer -->
 
     <footer class="footer">
         <div class="footer__content">    

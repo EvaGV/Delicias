@@ -3,26 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <meta name="galeria" content="width=device-width, initial-scale=1.0">
+   
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/galeria.js" defer></script>
-   <script src="/js/menubarras.js" defer></script>
+
+    <!-- JavaScript -->
+   <script src="js/script.js" defer></script>
+   <script src="js/scroll.js" defer></script>
+   <script src="js/galeria.js" defer></script>
+   <script src="js/menubarras.js" defer></script>
     <title>Galería</title>
     
 </head>
 
 <body>
+
+    <!-- Logo Header -->
     <header class="header">
         <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
@@ -35,7 +38,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -47,37 +50,39 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
           <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
 
     </header>
+
+    <!-- Formada por un título y un slider con 20 fotos que se pueden pasar infinitamente, no se queda parada cuando llega a la última foto-->
 
     <main class="main-slider">
             <section class="slider">
                 <div class="slider__header">
                     <h1 class="slider__titulo">Así lucen nuestras frutas y verduras. Apetecibles, ¿verdad?</h1>
                 </div>
-                <div class="slider__container">
+                <div class="slider__contenedor">
                 <div class="slider__img">
-                    <img src="img/citricos3.jpg" alt="Foto 1">
-                    <img src="img/limon.jpg" alt="Foto 2">
-                    <img src="img/arandanos.jpg" alt="Foto 3">
-                    <img src="img/citricos.jpg" alt="Foto 4">
-                    <img src="img/fresas.jpg" alt="Foto 5">
-                    <img src="img/manzanas.jpg" alt="Foto 8">
-                    <img src="img/naranjas.jpg" alt="Foto 9">
+                    <img src="img/citricos3.webp" alt="Foto 1">
+                    <img src="img/limon.webp" alt="Foto 2">
+                    <img src="img/arandanos.webp" alt="Foto 3">
+                    <img src="img/citricos.webp" alt="Foto 4">
+                    <img src="img/fresas.webp" alt="Foto 5">
+                    <img src="img/manzanas.webp" alt="Foto 8">
+                    <img src="img/naranjas.webp" alt="Foto 9">
                     <img src="img/variado.webp" alt="Foto 18">
-                    <img src="img/fruta_tienda.jpg" alt="Foto 10">
-                    <img src="img/frambuesa.jpg" alt="Foto 11">
+                    <img src="img/fruta_tienda.webp" alt="Foto 10">
+                    <img src="img/frambuesa.webp" alt="Foto 11">
                     <img src="img/brocoli.webp" alt="Foto 12">
                     <img src="img/papaya.webp" alt="Foto 13">
                     <img src="img/tomates.webp" alt="Foto 14">
@@ -91,10 +96,12 @@
                 </div>
             </div>
 
-            <button class="slider__arrow slider__arrow--left" id="prevBtn" title="botón">
+            <!-- Flechas para moverse entre las fotos  -->
+
+            <button class="flecha__slider flecha__slider--left" id="anterior" title="botón">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="slider__arrow slider__arrow--right" id="nextBtn" title="botón">
+            <button class="flecha__slider flecha__slider--right" id="siguiente" title="botón">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>  
 

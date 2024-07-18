@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/menubarras.js" defer></script>
-   <script src="/js/botones.js"></script>
+
+    <!-- JavaScript -->
+   <script src="js/script.js" defer></script>
+   <script src="js/scroll.js" defer></script>
+   <script src="js/menubarras.js" defer></script>
+   <script src="js/botones.js"></script>
 
     <title>Formulario 3</title>
     
 </head>
 
 <body>
+    <!-- Logo Header -->
     <header class="header">
         <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
@@ -36,7 +39,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -48,33 +51,34 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
           <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
 
         
     </header>
 
-
+<!-- Imagen de cabecera -->
     <div class="imagen imagen--opcion3">
-        <h1 class="imagen__title">Revoluciona tu forma de hacer la compra 3/5</h1>
+        <h2 class="imagen__title">Revoluciona tu forma de hacer la compra 3/5</h2>
     </div>
 
+<!-- Formulario con menú desplegable para elegir una de las opciones y viene marcada una por defecto -->
 <main class="main">
     <section class="registro">
             <form class="registro__form" action="#" method="get">
-                <h4 class="registro__heading">Tu consumo de frutas y verduras</h4>
+                <h1 class="registro__heading">Tu consumo de frutas y verduras</h1>
 
-    
-            <div class="registro-formulario--habits">
+   
+            <div class="registro-formulario--habitos">
                 <label for="frutas">¿Con qué frecuencia consumes frutas?</label>
                 <select id="frutas" name="frutas">
                     <option value="todos-los-dias">Todos los días</option>
@@ -84,8 +88,7 @@
                 </select>
             </div>
     
-            <!-- Cuántas piezas de fruta se comen al día -->
-            <div class="registro-formulario--habits">
+            <div class="registro-formulario--habitos">
                 <label for="piezas-fruta">¿Cuántas piezas de fruta consumes al día?</label>
                 <select id="piezas-fruta" name="piezas-fruta">
                     <option value="ninguna">Ninguna</option>
@@ -96,8 +99,7 @@
                 </select>
             </div>
     
-            <!-- Frecuencia de Consumo de Verduras -->
-            <div class="registro-formulario--habits">
+            <div class="registro-formulario--habitos">
                 <label for="verduras">¿Con qué frecuencia consumes verduras?</label>
                 <select id="verduras" name="verduras">
                     <option value="todos-los-dias">Todos los días</option>
@@ -107,8 +109,7 @@
                 </select>
             </div>
     
-            <!-- Número de Personas en el Hogar -->
-            <div class="registro-formulario--habits">
+            <div class="registro-formulario--habitos">
                 <label for="personas-casa">¿Cuántas personas viven en tu casa?</label>
                 <select id="personas-casa" name="personas-casa">
                     <option value="1">1</option>
@@ -119,8 +120,7 @@
                 </select>
             </div>
     
-            <!-- Hábitos de Consumo Fuera del Hogar -->
-            <div class="registro-formulario--habits">
+            <div class="registro-formulario--habitos">
                 <label for="comer-fuera">¿Con qué frecuencia comes fuera de casa?</label>
                 <select id="comer-fuera" name="comer-fuera">
                     <option value="todos-los-dias">Todos los días</option>
@@ -130,8 +130,8 @@
                 </select>
             </div>
     
-            <!-- Llevar Comida Preparada -->
-            <div class="registro-formulario--habits">
+
+            <div class="registro-formulario--habitos">
                 <label for="comida-preparada">¿Sueles llevar comida preparada de casa cuando comes fuera?</label>
                 <select id="comida-preparada" name="comida-preparada">
                     <option value="si">Sí</option>
@@ -145,18 +145,17 @@
                 <button class="btn" type="button" id="siguiente2" title="botón">Siguiente</button>        
             </div>
 
-            <div class="fruit-container animate-mover">
-                <div class="fruit-container__fruit">
-                    <img src="img/manzana.png" alt="manzana" class="fruit-container__img fruit-container__img--manzana">
+            <!-- Animaciones -->
+            <div class="contenedor-fruta animate-mover">
+                <div class="contenedor-fruta__fruit">
+                    <img src="img/manzana.png" alt="manzana" class="contenedor-fruta__img contenedor-fruta__img--manzana">
                 </div>
             </div>
         </form>
-
-        
     </section>
-
-
 </main>
+
+<!-- Footer -->
 
 <footer class="footer">
     <div class="footer__content">    

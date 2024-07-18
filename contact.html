@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Librería-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
-   <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/menubarras.js" defer></script>
-   <script src="/js/botones.js" defer></script>
+    <!-- Estilos CSS-->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+ 
+   <!-- JavaScript -->
+   <script src="js/script.js" defer></script>
+   <script src="js/scroll.js" defer></script>
+   <script src="js/menubarras.js" defer></script>
+   <script src="js/botones.js" defer></script>
 
    
     <title>Sobre nosotros y Contacto</title>
@@ -25,6 +26,8 @@
 </head>
 
 <body>
+
+    <!-- LOGO -->
     <header class="header">
         <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
@@ -37,7 +40,7 @@
             <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
             <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
             <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-            <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+            <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
 
@@ -50,15 +53,15 @@
             <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
             <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
             <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-            <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+            <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
         </ul>
     </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
         <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
@@ -66,6 +69,8 @@
 
 
     <main class="main-contact">
+        <!-- Sección Sobre nosotros, lleva una imagen de fondo, un título con móvimiento como la página de inicio y el texto -->
+
         <section class="about">
             <h2 class="section__title">Sobre Nosotros</h2>
             <p class="section__text">Delicias Naturales nace para hacer más fácil el proceso de compra a nuestros clientes, ofreciendo una selección de frutas frescas y productos naturales de alta calidad. Ubicados en el corazón de Zaragoza, nos apasiona promover una alimentación saludable y sostenible.<br>
@@ -79,7 +84,7 @@
                 </p>
             
         </section>
-
+        <!-- Sección Contacto, lleva un formulario con nombre, correo y mensaje y un botón de enviar -->
         <section class="contact">
             <h2 class="section__title">Contáctanos</h2>
             <p class="section__text">Si tienes alguna pregunta, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
@@ -91,14 +96,18 @@
             </form>
         </section>
 
+        <!-- Sección Mapa, con la ubicación para encontrarnos,  -->
+
         <section class="map">
             <h2 class="section__title">Dónde nos puedes encontrar</h2>
             <div class="map__container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11925.144515002567!2d-0.9212646331834056!3d41.64955953836424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596b3184eba575%3A0x145804a146a743e7!2sDelicias%2C%20Zaragoza!5e0!3m2!1ses!2ses!4v1720888801238!5m2!1ses!2ses" class="map__iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11925.144515002567!2d-0.9212646331834056!3d41.64955953836424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596b3184eba575%3A0x145804a146a743e7!2sDelicias%2C%20Zaragoza!5e0!3m2!1ses!2ses!4v1720888801238!5m2!1ses!2ses" class="map__iframe" allowfullscreen="" loading="lazy" title="mapa" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
        
     </main>
+
+    <!-- Footer -->
 
     <footer class="footer">
         <div class="footer__content">    

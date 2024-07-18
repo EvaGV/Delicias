@@ -3,22 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="recetas" content="width=device-width, initial-scale=1.0">
     <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="/css/style.css">
-   <script src="/js/recetas.js" defer></script>
-   <script src="/js/script.js" defer></script>
-   <script src="/js/favoritos.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SCRIPT -->
+   <script src="js/recetas.js" defer></script>
+   <script src="js/script.js" defer></script>
+   <script src="js/favoritos.js" defer></script>
+   <script src="js/scroll.js" defer></script>
    <script src="js/botones.js" defer></script>
+   <script src="js/menubarras.js" defer></script>
+
 
     <title>Recetas</title>
     
@@ -37,7 +41,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -49,21 +53,24 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
          <!-- BOTÓN SCROLL ARRIBA -->
-         <span id="btnScrollToTop" class="btn-scroll-top" >
+         <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
     </header>
 
-        
+        <!-- Esta página es como un blog donde aparecen diferentes tarjetas cada una con su imagen, título, texto
+         botón para añadir favoritos que es un contador de favoritos, un Leer más que no lleva a ningún sitio porque no existe,
+         la opción de añadir comentarios y las estrellas de dificultad de la receta. En la parte de abajo aparecen 4 páginas de navegación, que no funcionan porque no existen más páginas
+         Las imágenes tienen cargada la propiedad lazy para que no se carguen hasta que no se muestren en pantalla -->
     <main class="main-receta">
         <section class="recetas">
             <div class="recetas__header">
@@ -71,6 +78,7 @@
             </div>
 
             <div class="recetas__grid">
+                <!-- RECETA1 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta1.webp" alt="Imagen de Receta">
                     <h2 class="receta__title">Ensalada Mediterránea</h2>
@@ -79,7 +87,7 @@
                         <button class="receta__favoritos" title="botón"><i class="fa-solid fa-heart"></i> <span class="receta__contador">0</span></button>
                          <a href="#" class="receta__leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -95,7 +103,7 @@
                     </div>
                 </article>
 
-
+                <!-- RECETA 2 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta4.webp" alt="Imagen de Receta">
                     <h2 class="receta__title">Tacos de Pollo al Pastor</h2>
@@ -105,7 +113,7 @@
                        
                         <a href="#" class="receta__leer" title="leer más">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -121,7 +129,7 @@
                     </div>
                 </article>
 
-
+                    <!-- RECETA 3 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta6.webp" alt="Imagen de Receta" loading="lazy">
                     <h2 class="receta__title">Pasta al Pesto</h2>
@@ -131,7 +139,7 @@
                   
                         <a href="#" class="receta__leer" title="leer más">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -147,7 +155,7 @@
                     </div>
                 </article>
 
-
+                    <!-- RECETA 4 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta2.webp" alt="Imagen de Receta" loading="lazy">
                     <h2 class="receta__title">Galletas de Avena y Chocolate</h2>
@@ -157,7 +165,7 @@
                         
                         <a href="#" class="receta__leer" title="leer más">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -172,6 +180,8 @@
                         <button class="comentarios__submit" title="botón">Añadir Comentario</button>
                     </div>
                 </article>
+
+                <!-- RECETA 5 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta5.webp" alt="Imagen de Receta" loading="lazy">
                     <h2 class="receta__title">Curry de Garbanzos</h2>
@@ -181,7 +191,7 @@
                         
                         <a href="#" class="receta__leer" title="leer más">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -196,6 +206,8 @@
                         <button class="comentarios__submit" title="botón">Añadir Comentario</button>
                     </div>
                 </article>
+
+                <!-- RECETA 6 -->
                 <article class="receta">
                     <img class="receta__img" src="img/receta3.webp" alt="Imagen de Receta" loading="lazy">
                     <h2 class="receta__title">Batido de Frutas Tropicales</h2>
@@ -205,7 +217,7 @@
                         
                         <a href="#" class="receta__leer" title="leer más">Leer más <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <h4 class="productos-destacados__name">Dificultad</h4>
+                    <h3 class="productos-destacados__name">Dificultad</h3>
                     <div class="productos-destacados__rate">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -221,17 +233,19 @@
                     </div>
                 </article>
             </div>
+            <!-- Falso enlace. No he puesto href porque no tenía nada que rellenar aunque en otros botones si lo he puesto, pero con una dirección
+             falsa -->
             <div class="paginas">
-                <a>1</a><br>
-                <a>2</a>
-                <a>3</a>
-                <a>4</a>
-                <a><i class="fa-solid fa-arrow-right"></i></a>
+                <a href="noexiste.html">1</a><br>
+                <a href="noexiste.html">2</a>
+                <a href="noexiste.html">3</a>
+                <a href="noexiste.html">4</a>
+                <a href="next.html"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
        
     </main>
-     
+     <!-- Footer -->
     <footer class="footer">
         <div class="footer__content">    
                 <div class="footer__social">

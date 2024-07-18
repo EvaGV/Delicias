@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
    <script src="/js/script.js" defer></script>
    <script src="/js/scroll.js" defer></script>
    <script src="/js/menubarras.js" defer></script>
@@ -36,7 +37,7 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
@@ -48,151 +49,131 @@
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+                <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
             </ul>
         </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode" title="botón"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
           <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
         </span>
         
     </header>
 
+<!-- Imagen cabecera  -->
     <div class="imagen imagen--opcion4">
-        <h1 class="imagen__title ">Revoluciona tu forma de hacer la compra 4/5</h1>
+        <h2 class="imagen__title ">Revoluciona tu forma de hacer la compra 4/5</h2>
     </div>
 
+<!-- Formulario tipo checkbox donde se pueden marcar todas las opciones que se quieran ya que cada una tiene un nombre diferente.
+ Estructurado en 3 columnas-->
 <main>
     <section class="contenedor">
             <form action="#" method="get">
-                <h2 class="registro__heading">Tu consumo de frutas y verduras</h2>
+                <h1 class="registro__heading">Tu consumo de frutas y verduras</h1>
                 <div class="contenedor__grande">
-                    <label class="checkbox-group__title">Selecciona todas las frutas que te gustaría que incluyese tu cesta</label>
-                    
+                    <label class="contenedor__titulo">Selecciona todas las frutas que te gustaría que incluyese tu cesta</label>
+                    <!-- columna 1 -->
                     <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta1" name="frutas" value="Manzana">
                         <label for="fruta1">Manzana</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta2" name="frutas" value="Plátano">
                         <label for="fruta2">Plátano</label>
-                    </div>
-                    
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta3" name="frutas" value="Pera">
                         <label for="fruta3">Pera</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta4" name="frutas" value="Naranja">
                         <label for="fruta4">Naranja</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta5" name="frutas" value="Mandarina">
                         <label for="fruta5">Mandarina</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta6" name="frutas" value="Kiwi">
                         <label for="fruta6">Kiwi</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta7" name="frutas" value="Melón">
                         <label for="fruta7">Melón</label>
                     </div>
+                    
+                    <!-- Columna 2 -->
                     <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta8" name="frutas" value="Sandía">
                         <label for="fruta8">Sandía</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta9" name="frutas" value="Piña">
                         <label for="fruta9">Piña</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta10" name="frutas" value="Fresa">
                         <label for="fruta10">Fresa</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta11" name="frutas" value="Mango">
                         <label for="fruta11">Mango</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta12" name="frutas" value="Uva">
                         <label for="fruta12">Uva</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta13" name="frutas" value="Cereza">
                         <label for="fruta13">Cereza</label>
-                    </div>
-                    <div class="contenedor__columnas">
+
                         <input type="checkbox" id="fruta14" name="frutas" value="Arándano">
                         <label for="fruta14">Arándano</label>
                     </div>
+                                      
+                   <!-- Columna 3 -->
                     <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta15" name="frutas" value="Frambuesa">
                         <label for="fruta15">Frambuesa</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta16" name="frutas" value="Papaya">
                         <label for="fruta16">Papaya</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta17" name="frutas" value="Granada">
                         <label for="fruta17">Granada</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta18" name="frutas" value="Pomelo">
                         <label for="fruta18">Pomelo</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta19" name="frutas" value="Higo">
                         <label for="fruta19">Higo</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta20" name="frutas" value="Caqui">
                         <label for="fruta20">Caqui</label>
-                    </div>
 
-                    <div class="contenedor__columnas">
                         <input type="checkbox" id="fruta21" name="frutas" value="Moras">
                         <label for="fruta21">Moras</label>
                     </div>
-                    
-                </div>
-                
+                   
+                <!-- Caja de observaciones -->
                 <div class="observaciones">
                     <label for="observaciones">Observaciones adicionales:</label><br>
                     <textarea id="observaciones" name="observaciones" placeholder="Dinos otras frutas que no aparecen en la lista y te gustaría recibir..."></textarea>
                 </div>
-    
-                <div class="divbutton">
+
+                <!-- Botones de navegación -->
+                <div class="divbutton--columnas">
                     <button class="btn" type="button" id="anterior3" title="botón">Anterior</button>
                     <button class="btn" type="button" id="siguiente3" title="botón">Siguiente</button>
 
                 </div>
 
-                <div class="fruit-container animation-hop">
-                    <div class="fruit-container__img">
-                        <img src="img/aguacate.png" alt="aguacate" class="fruit-container__img fruit-container__img--aguacate">
+                <!-- Animación -->
+                <div class="contenedor-fruta animation-hop">
+                    <div class="contenedor-fruta__fruit">
+                        <img src="img/aguacate.png" alt="agucate" class="contenedor-fruta__img contenedor-fruta__img--aguacate">
                     </div>
                 </div>
                 
             </form>
             
     </section>
-    
-
 
 </main>
-
+<!-- Footer -->
 <footer class="footer">
     <div class="footer__content">    
             <div class="footer__social">

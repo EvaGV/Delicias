@@ -3,31 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Librería -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Tipografía -->
+    <meta name="registro" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- Estilos CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js" defer></script>
-   <script src="/js/scroll.js" defer></script>
-   <script src="/js/menubarras.js" defer></script>
-   <script src="/js/formulario.js" defer></script>
-   <script src="/js/botones.js" defer></script>
+
+    <!-- SCRIPT -->
+    <script src="js/script.js" defer></script>
+   <script src="js/scroll.js" defer></script>
+   <script src="js/menubarras.js" defer></script>
+   <script src="js/formulario.js" defer></script>
+   <script src="js/botones.js" defer></script>
 
     
     <title>Formulario</title>
 </head>
 
 <body>
+    <!-- Logo Menú -->
     <header class="header">
         <div class="header__logo">
             <img src="img/dn_white.png" alt="logo">
@@ -40,7 +42,7 @@
             <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
             <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
             <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-            <li class="header__nav-item"><a href="usuario.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+            <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
 
@@ -52,31 +54,30 @@
             <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
             <li class="header__menu-item"><a href="galeria.html" title="galeria">Galería</a></li>
             <li class="header__menu-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-            <li class="header__menu-item"><a href="usuario.html" title="perfil">Mi Cuenta</a></li>
+            <li class="header__menu-item"><a href="iniciosesion.html" title="perfil">Mi Cuenta</a></li>
         </ul>
     </nav>
 
         <!-- BOTÓN MODO OSCURO -->
-        <button class="btn--dark" id="toggle-dark-mode"><i class="fa-solid fa-moon" title="botón"></i></button>
+        <button class="btn--dark" id="modo-oscuro"><i class="fa-solid fa-moon" title="botón"></i></button>
 
           <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScrollToTop" class="btn-scroll-top" >
+        <span id="btnScroll" class="btn--scroll" >
             <i class="fa-solid fa-arrow-up"></i>
-        </span>
-
-        
+        </span>        
     </header>
 
-
+<!-- Imagen cabecera -->
     <div class="imagen">
-        <h1 class="imagen__title">Revoluciona tu forma de hacer la compra 1/5</h1>
+        <h2 class="imagen__title">Revoluciona tu forma de hacer la compra 1/5</h2>
     </div>
 
+    <!-- Formulario de registro que funciona con JavaScript, es el único. Hay que rellenar todos los campos correctamente, la contraseña tiene que
+     coincidir. El enlace de TYC no lleva a ningún sitio xq no existe esa página. El de Ya tengo una cuenta lleva a la página de registro -->
     <main class="main">
-        
         <section class="registro">
-            <form id="registrationForm" action="#" method="get">
-                <h2 class="registro__heading">EMPIEZA EL CAMBIO</h2>
+            <form id="registro-formulario" action="#" method="get">
+                <h1 class="registro__heading">EMPIEZA EL CAMBIO</h1>
                 
                 <label for="nombre" class="registro__label"></label>
                 <input class="registro__input" type="text" name="nombres" id="nombre" placeholder="Nombre" required>
@@ -93,20 +94,23 @@
                 <label for="confirmar-contraseña" class="registro__label"></label>
                 <input class="registro__input" type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirmar Contraseña" required>
     
-                <p class="registro__agreement">Estoy de acuerdo con <a href="#" target="_blank">TyC</a></p>
+                <p class="registro__agreement">Estoy de acuerdo con <a href="nohay" target="_blank">TyC</a></p>
     
-                <button class="btn" type="submit" id="registrarme" title="botón">Registrarme</button>
+                <button class="btn" type="submit" id="registrarme" title="botón">Registrarme</button><br>
 
-                <p class="registro__login">Ya tengo una cuenta</p>
+                <a href="iniciosesion.html" title="inicio sesión">Ya tengo una cuenta</a>
             </form>
+
+            <!-- Animación -->
     
-            <div class="fruit-container animate-bounce">
-                <div class="fruit-container__fruit">
-                    <img src="img/pera.png" alt="pera" class="fruit-container__img fruit-container__img--pera">
+            <div class="contenedor-fruta animate-bounce">
+                <div class="contenedor-fruta__fruit">
+                    <img src="img/pera.png" alt="pera" class="contenedor-fruta__img contenedor-fruta__img--pera">
                 </div>
             </div>
         </section>
     </main>
+    <!-- Footer -->
     
     <footer class="footer">
         <div class="footer__content">    

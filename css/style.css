@@ -1,8 +1,11 @@
+/* RESETEO BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* TIPOGRAFÍAS ELEGIDAS */
 
 @font-face {
     font-family: "Unbounded";
@@ -13,7 +16,9 @@
     src: url("../fonts/RedHatText-Medium.ttf") format('truetype');
 }
 
-/* Variables */
+/* VARIABLES PARA TODO EL DOCUMENTO */
+
+/* COLORES DEFINIDOS */
 :root {
     --color-primary: #d25609;
     --color-secondary: #325407;
@@ -21,14 +26,15 @@
     --text-secondary: #000;
 }
 
+/* COLORES PARA EL MODO OSCURO */
 .u-darkmode {
     --color-primary: #1a1a1a;
-    --color-secondary: #2f2f2e;
+    --color-secondary: #5b5959;
     --text-primary:#fff;
    --text-secondary: #fffdbe;
-
 }
 
+/* FUENTES ELEGIDAS PARA CADA ELEMENTO */
 h1, h2, h3, h4 {
     font-family: "Unbounded";
 }
@@ -50,6 +56,7 @@ body, html {
     height: 100%;
 }
 
+/* BOTONES DE TODO EL DOCUMENTO */
 .btn{
     background-color: var(--color-secondary);
     color: var(--text-primary);
@@ -71,7 +78,7 @@ body, html {
 .btn--dark{
     font-size: 1em;
     color: var(--text-primary);
-    padding: 10px 25px;
+    padding: 10px 20px;
     cursor: pointer;
     background: transparent; 
     border-radius: 30px;
@@ -82,53 +89,62 @@ body, html {
     transform: scale(1.1);
 }
 
-.btn-scroll-top {
+.btn--scroll {
+    display: none;
     position: fixed;
     bottom: 30px; 
     right: 20px; 
     background-color: var(--color-primary); 
     color: var(--text-primary); 
-    border: none; 
+    border: 5px solid var(--color-secondary);
     border-radius: 30px; 
     padding: 10px; 
     cursor: pointer; 
-   display: none;
-    transition: opacity 0.3s ease; 
+}
+.btn--scroll:hover {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
 }
 
-/* Header */
+/* _________________
+HEADER. el mismo en todas las páginas
+____________________*/
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Usamos flex para alinear los elementos hijos */
+    align-items: center; 
+    justify-content: space-between; /*Distribuye el espacio entre los elementos*/
     background-color: var(--color-primary);
-    padding: 1rem;
-    position: fixed;
+    padding: 1rem; /*Espacio interno alrededor del contenido*/
+    position: fixed; /*Mantiene el header en posición fija y visible*/
     margin: 0;
-    width: 100%;
-    height: 5em;
-    z-index: 100;
+    width: 100%; 
+    height: 5em; 
+    z-index: 100; /*PONEMOS INDEX PARA ASEGURARNOS QUE ESTÉ SIEMPRE VISIBLE Y NO SE POSICIONE ENCIMA NINGÚN ELEMENTO*/
 }
 
-.header__logo img {
-    max-height: 250px;
+.header__logo img{
+    width: 100%;
+    height: auto;
 }
 
 .header__nav {
     display: flex;
+    flex: 1;
+    justify-content: center; 
     align-items: center;
 }
 
 .header__nav-list {
     display: flex;
-    gap: 1.5rem;
-    list-style: none;
+    gap: 24px;
+    list-style: none; /*Eliminamos los puntos de lista*/
 }
-
+ 
+/* AGRUPAMOS ELEMENTOS QUE FUNCIONAN DE LA MISMA MANERA PARA MEJORAR LA LEGIBILIDAD */
 .header__nav-item a,
 .header__menu-item a {
     color: var(--text-primary);
-    text-decoration: none;
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
     font-weight: bold;
     font-size: 1rem;
 }
@@ -139,7 +155,7 @@ body, html {
 }
 
 .header__menu-icon {
-    display: none;
+    display: none; /*Oculta el icono por defefcto*/
     cursor: pointer;
     color: var(--text-primary);
     background-color: var(--color-primary);
@@ -152,12 +168,12 @@ body, html {
 }
 
 .header__menu-dropdown {
-    display: none;
-    position: absolute;
-    top: 40px;
+    display: none; 
+    position: absolute; /*Le ponemos esta posición para que lo posicione de manera absoluta con respecto al contenedor más cercado con position relative*/
+    top: 2.5rem;
     background-color: var(--color-primary);
-    left: 50%;
-    padding: 10px;
+    left: 50%; /*centra el menú horizontalmente en el contenedor padre*/
+    padding: .625rem;
 }
 
 .header__menu-list {
@@ -165,11 +181,11 @@ body, html {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Alinea los elementos columna*/ 
 }
 
 .header__menu-dropdown.show {
-    display: block;  
+    display: block;  /*Hace que se muestre el menú*/
 }
 
 .header__btn-dark {
@@ -183,58 +199,59 @@ body, html {
 
 
 /* _______________
-INDEX
+    INDEX
 ___________________*/
 
-.section {
+.seccion {
     padding: 4rem 1rem;
     text-align: center;
 }
 
-.section--primary {
+.seccion--primera {
     background-color: var(--color-primary);
     color: var(--text-primary);
 }
 
-.section--secondary {
+.seccion--segunda {
     background-color: var(--color-secondary);
     color: var(--text-primary);
 }
 
-.section__video-container video {
+.seccion__video-contenedor video {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
 }
 
-.section__text-container {
+.seccion__text-contenedor {
     max-width: 800px;
     margin: 2rem auto;
 }
 
-.section__title {
+.seccion__title {
     font-family: 'Unbounded', sans-serif;
     font-size: 2.5rem;
     margin-top: 1.5em;
-    animation: typing 3s steps(30);
+    animation: typing 3s steps(30);/* Hace que el título se cargue con movimiento */
 }
 
 @keyframes typing {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
 }
 
-.section__text {
+.seccion__text {
     font-size: 1.2rem;
 }
 
+/* ______________________
+PRODUCTOS DESTACADOS 
+_________________________*/
 
-/* Productos  destacados */
 .productos-destacados {
     padding: 2rem 1rem;
     text-align: center;
@@ -245,7 +262,7 @@ ___________________*/
     margin-bottom: 2rem;
 }
 
-.productos-destacados__row {
+.productos-destacados__fila {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -255,8 +272,8 @@ ___________________*/
 
 .productos-destacados__col {
     background-color: var(--text-primary);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: .625rem;
+    box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, 0.1);
     padding: 1rem;
     max-width: 300px;
     text-align: center;
@@ -264,9 +281,9 @@ ___________________*/
 
 .productos-destacados__col img {
     width: 100%;
-    max-width: 200px;
+    max-width: 12.5rem;
     height: auto;
-    max-height: 300px;
+    max-height: 18.75rem;
 }
 
 .productos-destacados__name {
@@ -284,37 +301,76 @@ ___________________*/
     color: var(--color-secondary);
 }
 
-/* Promo Section */
-.promo {
+.productos-destacados__col:hover .productos-destacados__info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.productos-destacados__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(199, 102, 5, 0.8);
+    border-radius: 10px;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.productos-destacados__info p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.productos-destacados__info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.productos-destacados__info ul li {
+    margin: .3125rem 0;
+}
+
+
+/* SECCIÓN AHORRA TIEMPO */
+.tiempo {
     padding: 2rem 1rem;
     background-color: var(--color-primary);
     color: var(--text-primary);
     text-align: center;
 }
 
-.promo__container {
+.tiempo__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
 
-.promo__img img {
+.tiempo__img img {
     max-width: 50%;
 }
 
-.promo__text {
-    max-width: 500px;
+.tiempo__text {
+    max-width: 31.25rem;
     text-align: center;
     font-size: 1.5em;
 }
 
-.promo__btn i {
-    margin-left: 0.5rem;
+.tiempo__btn i {
+    margin-left: .5rem;
 }
 
-
-/* Footer */
+/* ______________
+    Footer 
+_________________*/
 .footer {
     background-color: var(--color-secondary);
     color: var(--text-primary);
@@ -333,7 +389,7 @@ ___________________*/
 }
 
 .footer__social {
-    max-width: 300px;
+    max-width: 18.75rem;
     font-size: 0.75em;
 }
 
@@ -357,25 +413,22 @@ ___________________*/
 
 /* _____________________________
     ANIMACIONES
-__________________________________ */
+________________________________*/
 
-.fruit-container__img {
-    display: block; /* Asegura que la imagen sea un bloque */
+.contenedor-fruta__img {
+    display: block; /* La imagen es un bloque */
     margin: 0 auto;
 }
 
-.fruit-container__img--pera,
-.fruit-container__img--aguacate,
-.fruit-container__img--manzana,
-.fruit-container__img--kiwi{
+.contenedor-fruta__img--pera,
+.contenedor-fruta__img--manzana,
+.contenedor-fruta__img--naranja,
+.contenedor-fruta__img--aguacate,
+.contenedor-fruta__img--kiwi{
     width: 9.375rem;
 }
 
-.fruit-container__img--naranja {
-    width: 100px; 
-}
-
-.fruit-container__img img {
+ img{
     width: 30%;
 }
 
@@ -386,7 +439,6 @@ __________________________________ */
 .animate-bounce{
     animation: bounce 2s infinite;
 }
-
 
 .animation-hop{
     animation: hop 1s ease-in-out infinite alternate;
@@ -405,7 +457,6 @@ __________________________________ */
         /* Altura del salto */
     }
 }
-
 
 @keyframes mover-fruta {
     0% {
@@ -429,64 +480,55 @@ __________________________________ */
     }
 }
 
-.error {
-    color: red;
-    margin-top: 5px;
-}
-
 .main {
-    padding: 10px 20px 20px;
+    padding: .625rem 1.25rem 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 /* ___________________
-USUARIO
+    FORMULARIOS
 _______________________ */
 .main-usuario{
-    padding: 10px 20px 20px;
+    padding: .625rem 1.25rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
-
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .registro {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 1.875rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
     background-color: var(--color-primary);
-    padding: 30px;
-    margin: 100px 0;
-    border-radius: 30px;
+    padding: 1.875rem;
+    margin: 6.25rem 0;
+    border-radius: 1.875rem;
     color: var(--text-primary);
-    box-shadow: 7px 13px 37px #81664c;
+    box-shadow: .4375rem .8125rem 2.3125rem #81664c;
     text-align: center;
 }
 
 .contenedor {
-    display: grid;
-    align-items: flex-start;
-    max-width: 800px;
+    display: flex;
+    text-align: space-around;
+    max-width: 50rem;
     background-color: var(--color-primary);
-    padding: 30px;
-    margin: 100px auto;
-    border-radius: 30px;
+    padding: 1.875rem;
+    margin: 6.25rem auto;
+    border-radius: 1.875rem;
     color: var(--text-primary);
-    box-shadow: 7px 13px 37px #81664c;
+    box-shadow: .4375rem .8125rem 2.3125rem #81664c;
 }
-
 
 .contenedor__grande{
     display: flex;
@@ -494,84 +536,75 @@ _______________________ */
     justify-content: space-between;
 }
 
-.contenedor__columnas{
-    flex: 1 1 calc(33.33% - 20px); 
-    margin: 5px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-   
-    gap: 10px;
-    justify-items: center;
+.contenedor__columnas label {
+    display: flex; 
+    align-items: center;
 }
 
 
 .registro__input {
     width: 90%;
     background-color: #f8f2e5;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #faf6d2;
-    font-size: 18px;
+    padding: .625rem;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    border: .0625rem solid #faf6d2;
+    font-size: 1.125rem;
 }
 
 .registro__period {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 10px;
+    margin-bottom: 1.25rem;
+    border-radius: .625rem;
+    padding: .625rem;
     background-color: #f8f2e5;
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     transition: transform 0.3s ease;
 }
 
 .registro__period:hover {
     background-color: var(--color-primary);
-    color: #fff;
-    border-color: #fff;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
     transform: scale(1.1);
 }
 
 .registro__habits {
-    display: inline-block;
+    display: inline-block; /*Alinear los elementos en la misma línea*/
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding: 10px;
+    margin-bottom: 1.25rem;
+    border-radius: .625rem;
+    padding: .625rem;
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--text-primary);
     border: 2px solid;
     cursor: pointer;
     margin-top: 20px;
-    transition: transform 0.3s ease;
 }
 
 .registro p {
-    height: 40px;
-    font-size: 18px;
-    line-height: 40px;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 2.5rem;
 }
 
 .registro a {
     color: #f3bc5c;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.registro a:hover {
-    color: #a0c175;
-    text-decoration: none;
-}
+/* IMÁGENES DE LA CABECERA DE CADA FORMULARIO */
 
 .imagen {
-    background-image: url('/img/form.jpg');
+    background-image: url('/img/form.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -582,25 +615,28 @@ _______________________ */
     justify-content: center;
     position: relative;
 }
-
 .imagen--opcion {
-    background-image: url(/img/varios2.jpg);
+    background-image: url(/img/varios2.webp);
 }
 
 .imagen--opcion2 {
-    background-image: url(/img/naranja_fondo.jpg);
+    background-image: url(/img/naranja_fondo.webp);
 }
 
 .imagen--opcion3 {
-    background-image: url(/img/limon_fondo.jpg);
+    background-image: url(/img/limon_fondo.webp);
 }
 
 .imagen--opcion4 {
-    background-image: url(/img/aguacate_rosa.jpg)
+    background-image: url(/img/aguacate_rosa.webp)
 }
 
 .imagen--opcion5{
     background-image: url(/img/zanahorias.webp);
+}
+
+.imagen--opcion6{
+    background-image: url(/img/varias4.webp);
 }
 
 .imagen__title {
@@ -609,52 +645,35 @@ _______________________ */
     text-align: center;
 }
 
-
-.checkbox-group__title {
+.contenedor__titulo {
     font-size: 1.5em;
-    grid-column: span 3;
 }
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* Asegura que los elementos estén alineados a la izquierda */
-    width: 100%;
-    /* Ocupa todo el ancho de la columna */
-}
-
-.checkbox-item input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 
 .observaciones {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     text-align: left;
     width: 100%;
-    /* Asegura que ocupe todo el ancho del contenedor */
 }
 
 .observaciones label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: .3125rem;
 }
 
 .observaciones textarea {
     width: 100%;
-    /* Asegura que el textarea ocupe todo el ancho del contenedor */
-    padding: 10px;
-    border-radius: 4px;
+    padding: .625rem;
+    border-radius: .25rem;
     border: 1px solid var(--color-secondary);
     font-size: 1rem;
-    box-sizing: border-box;
-    /* Incluye el padding y el borde en el tamaño total del textarea */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del textarea */
     resize: vertical;
-    /* Permite redimensionar verticalmente */
+ 
 }
 
-/* ___USUARIO  */
+/* _________
+    USUARIO  
+___________*/
 
 .perfil {
     padding: 2rem;
@@ -667,7 +686,6 @@ _______________________ */
     margin: 2rem auto;
     text-align: center;
     position: relative;
-    
 }
 
 .perfil__img {
@@ -685,7 +703,6 @@ _______________________ */
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* border: 3px solid var(--color-secondary); */
     border-radius: 50%;
 }
 
@@ -694,21 +711,20 @@ _______________________ */
     bottom: 0;
     width: 100%;
     height: 50%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     transition: opacity 0.3s ease;
-    opacity: 0; /* Inicialmente oculto */
+    opacity: 0; 
 }
 .perfil__camara i {
     color: white;
     font-size: 24px;
     cursor: pointer;
 }
-
 
 .perfil__img, 
 .perfil__camara:hover{
@@ -724,31 +740,29 @@ _______________________ */
     margin-top: 1rem;
 }
 
-.perfil__preferences {
+.perfil__preferencias {
     margin-bottom: 1.5rem;
     width: 100%;
     text-align: left;
-    
 }
 
 .perfil__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-size: 1.5rem;
     color: var(--color-secondary);
-   
 }
 
-.perfil__list {
+.perfil__lista {
     list-style-type: none;
     padding-left: 0;
 }
 
 .perfil__item {
-    margin: 0.5rem 0;
+    margin: .5rem 0;
 }
 
 .perfil__info {
-    text-align: left; /* Alinea el texto de .perfil__info a la izquierda */
+    text-align: left; 
 }
 
 .btn--cancelar {
@@ -760,16 +774,15 @@ _______________________ */
 
 
 
-/* _-______________ 
-formulario 3 
+/*_______________ 
+Formularios
 __________________*/
-
 
 .registro__form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* Espacio entre los elementos */
+    
 }
 
 .registro__heading {
@@ -777,8 +790,6 @@ __________________*/
     color: var(--color-secondary);
     text-align: center;
     margin-bottom: 1rem;
-    width: 100%;
-
 }
 
 .ulario--habits {
@@ -787,13 +798,13 @@ __________________*/
 }
 
 .registro-formulario--habits label {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-weight: 600;
-    /* Texto en negrita para los labels */
+    
 }
 
 .registro-formulario--habits select {
-    padding: 0.5rem;
+    padding: .5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -802,21 +813,29 @@ __________________*/
 .divbutton {
     display: flex;
     justify-content: space-between;
-    /* Espaciado entre botones */
+    
+}
+.divbutton--registro{
+    justify-content: center;
 }
 
-.registro-completado__heading {
-    font-size: 22px;
-    margin-bottom: 10px;
+.divbutton--columnas{
+    justify-content: space-around;
 }
 
-.registro-completado__message {
-    margin: 10px 0;
+.registro__heading {
+    font-size: 1.375rem;
+    margin-bottom: .625rem;
 }
 
-.registro-completado__next-step {
-    margin-bottom: 40px;
+.registro__message {
+    margin: .625rem 0;
 }
+
+.registro__sesion{
+    line-height: 48px;
+}
+
 
 /* ______________
     sobre nosotros
@@ -848,9 +867,9 @@ _______________________*/
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    max-width: 1200px; /* Ancho máximo para las secciones */
-    margin-left: auto; /* Centrar las secciones */
-    margin-right: auto; /* Centrar las secciones */
+    max-width: 1200px; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .contact__form {
@@ -883,17 +902,14 @@ _______________________*/
 
 .map__iframe {
     width: 100%;
-    /* Hace que el iframe ocupe el 100% del contenedor */
     height: 400px;
-    /* Altura por defecto */
     border: 0;
-    /* Sin bordes */
 }
 
 
 /* ______________________
-----------RECETAS--------
--_______________________ */
+    RECETAS
+_______________________ */
 
 .main-receta {
     display: flex;
@@ -936,18 +952,18 @@ _______________________*/
 .receta:hover,
 .productos-destacados__col:hover{
     transform: translateY(-5px);
+    background-color: rgba(3, 63, 24, 0.8);
+    color: var(--text-primary);
 }
 
 .receta__img {
     width: 100%;
-   
 }
 
 .receta__title {
     font-size: 1.5rem;
     margin: 1rem 0;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .receta__description {
@@ -959,14 +975,14 @@ _______________________*/
     display: flex;
     justify-content: space-around;
     gap: 1rem; 
-    margin-top: 0.5rem; 
+    margin-top: .5rem; 
 }
 
 .receta__favoritos {
     background-color: var(--color-secondary);
     color: var(--text-primary);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -998,7 +1014,6 @@ _______________________*/
 .receta__comentarios {
     padding: 1rem;
     text-align: left;
-    
 }
 
 .comentarios__lista {
@@ -1012,9 +1027,9 @@ _______________________*/
 
 .comentarios__input {
     width: 100%;
-    padding: 0.5rem;
+    padding: .5rem;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     font-size: 1.5em;
 }
 
@@ -1022,7 +1037,7 @@ _______________________*/
     background-color: var(--color-secondary);
     color: var(--text-primary);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 30px;
@@ -1058,17 +1073,17 @@ _______________________*/
 
 
 /* _______________________
-GALERÍA 
+    GALERÍA 
 __________________________ */
 
 .main-slider {
-    max-width: 800px; /* Ajusta según tus necesidades */
-    margin: 0 auto; /* Centra el slider */
+    max-width: 800px;
+    margin: 0 auto; 
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center;
+    justify-content: center; 
 }
 
 .slider {
@@ -1079,7 +1094,7 @@ __________________________ */
 
 .slider__header {
     text-align: center;
-    margin-top: 80px; /* Ajusta este valor según sea necesario */
+    margin-top: 80px; 
     margin-bottom: 20px;
     color: var(--color-secondary);
 }
@@ -1090,7 +1105,7 @@ __________________________ */
     color: var(--text--secondary);
 }
 
-.slider__container {
+.slider__contenedor {
     overflow: hidden; /* Oculta las imágenes fuera del contenedor */
     border: 2px solid var(--color-secondary); 
     border-radius: 30px; 
@@ -1108,91 +1123,69 @@ __________________________ */
 }
 
 .slider__img img {
-    max-width: 50%; /* Cada imagen ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 50%; 
+    height: auto;
     flex-shrink: 0; /* Evita que las imágenes se reduzcan */
-    border-radius: 10px; /* Bordes redondeados en imágenes */
-    
+    border-radius: 10px; 
 }
 
-.slider__arrow {
+.flecha__slider {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    
 }
 
-.slider__arrow--left {
-    left: 40px; /* Posiciona a la izquierda */
+.flecha__slider--left {
+    left: 40px; 
 }
 
-.slider__arrow--right {
-    right: 40px; /* Posiciona a la derecha */
+.flecha__slider--right {
+    right: 40px; 
 }
 
 .hidden {
     display: none; /* Oculta las imágenes */
 }
 
-.btn-scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--color-primary);
-    color: var(--text-primary);
-    border: 1px solid var(--color-secondary);
-    padding: 10px;
-    cursor: pointer;
-    display: none; /* Oculto por defecto */
-}
+/*___________________
+MEDIA QUERIES
+______________________*/
 
-.btn-scroll-top:hover {
-    background-color: var(--color-secondary);
-    border: 1px solid var(--color-primary);
-}
-
-
-/* 1. Dispositivos móviles (320px - 480px) */
+/* 1. Dispositivos móviles (320px- 480px) */
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .header__menu-icon {
         display: block;
     }
     .header__logo img {
-        max-height: 150px;
-    }
+        max-width: 70%;
+    }  
 
     .header__nav {
         display: none;
     }
 
-    .header__menu-dropdown {
-        display: none; /* Ocultar menú desplegable por defecto */
+    .header__menu-icon {
+        display: block;
+        margin-right: 80px; 
     }
-
-    .header__menu-dropdown.show {
-        display: block; /* Mostrar menú desplegable cuando tiene la clase "show" */
+    .header__menu-dropdown.show{
+        top: 80px; 
     }
 
     .btn--dark {
-        padding: 10px 20px; /* Relleno */
-        font-size: 20px; /* Tamaño de fuente */
+        padding: 10px 20px; 
+        font-size: 1.25rem; 
     }
 
     .perfil {
-        padding: 16px;
-        margin-top: 30px; /* Espacio para el header fijo */
-        background-color: var(--color-secondary);
-        color: var(--text-primary);
-        border-radius: 15px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
         max-width: auto;
         margin: 2rem auto;
-        text-align: left;
     }
 
     .footer__content {
@@ -1202,24 +1195,19 @@ __________________________ */
     }
 
     .footer__column {
-        max-width: 100%; /* Ancho máximo al 100% */
-        text-align: center; /* Centra el texto */
-    }
-
-    .contenedor{
-        max-width: 350px;
-        padding: 10px;
+        max-width: 100%;
+        text-align: center; 
     }
 
     .slider__titulo {
-        font-size: 1em; /* Reduce aún más el tamaño en pantallas muy pequeñas */
+        font-size: 1em; 
     }
 
     .slider__container {
-        padding: 10px; /* Reduce el padding */
+        padding: 10px; 
     }
 
-    .productos-destacados__row {
+    .productos-destacados__fila {
         margin: 0;
     }
 
@@ -1233,7 +1221,6 @@ __________________________ */
     
     .recetas__header{
             margin-top: 80px;
-
     }
     .contenedor__columnas {
         flex: 1 1 100%;}
@@ -1241,29 +1228,27 @@ __________________________ */
     .observaciones textarea{
         font-size: 10px;
     }
+
 }
 
 /* 2. iPads, tabletas (481px - 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .registro {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align items */
+        flex-direction: column; 
+        align-items: center; 
     }
 
-    .fruit-container {
-        margin-top: 20px; /* Space between form and pear image */
+    .contenedor-fruta {
+        margin-top: 20px; 
     }
-
     .footer__content {
         width: 90%;
         grid-gap: 10px;
-    
     }
    
     .map__iframe {
-        height: 300px; /* Reduce la altura en pantallas más pequeñas */
+        height: 300px; 
     }
-
     .contenedor {
         max-width: 600px;
     }
@@ -1287,62 +1272,69 @@ __________________________ */
     .header__nav {
         display: none;
     }
+    .header__menu-icon{
+        margin-right: 140px;
+    }
 
     .header__menu-dropdown {
-        display: none; /* Ocultar menú desplegable por defecto */
+        display: none;
+        margin-top: 30px; 
     }
-
-    .header__menu-dropdown.show {
-        display: block; /* Mostrar menú desplegable cuando tiene la clase "show" */
-    }
+    .header__logo img{
+    width: 70%;
+}
 
     .slider__titulo {
-        font-size: 1.5em; /* Reduce el tamaño en pantallas pequeñas */
+        font-size: 1.5em; 
     }
 }
 
 /* 3. Computadoras de escritorio, pantallas grandes (769px - 1200px) */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-    .header__logo img {
-        max-height: 200px;
-    }
 
     .header__nav {
         display: none;
     }
 
+    .header__logo img{
+        width: 80%;
+    }
+
     .header__menu-icon {
         display: block;
+        margin-right: 100px;
     }
 
     .header__menu-dropdown.show {
-        display: block; /* Mostrar el menú cuando tiene la clase show */
+        display: block; 
+        margin-left: 80px;
+        margin-top: 30px;
     }
 
-    .section__title {
+    .seccion__title {
         font-size: 1.5em;
     }
 
-    .section {
+    .seccion{
         padding: 32px 16px;
     }
 
     .productos-destacados__col {
-        max-width: calc(50% - 16px); /* Dos columnas en lugar de una en pantallas pequeñas */
+        max-width: calc(50% - 16px); 
         transform: translateY(-5px);
     }
 
     .productos-destacados__col img {
-        max-width: 15em; /* Ajustar el ancho al contenedor */
-        max-height: 15em; /* Limitar la altura máxima para evitar el desbordamiento */
+        max-width: 15em; 
+        max-height: 15em;
     }
 
-    .promo__container {
-        flex-direction: column; /* Cambiar a columnas en pantallas pequeñas */
-        gap: 16px; /* Añadir espacio entre elementos */
+    .tiempo__container {
+        flex-direction: column; 
+        gap: 16px; 
     }
 
-    .promo__text {
+    .tiempo__text {
         font-size: 1em;
     }
 
@@ -1352,7 +1344,7 @@ __________________________ */
     }
 
     .footer__column {
-        flex: 1 1 100%; /* Columna toma el 100% del ancho en pantallas pequeñas */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 
@@ -1372,205 +1364,186 @@ __________________________ */
 /* 4. Pantallas extra-grandes (1201px y más) */
 @media screen and (min-width: 1201px) {
     .productos-destacados__col {
-        max-width: calc(25% - 1.5rem); /* Cuatro columnas en pantallas grandes */
+        max-width: calc(25% - 1.5rem); 
     }
 
-        /* Títulos de sección */
-        .section__title {
-            font-size: 3rem; /* Tamaño de fuente */
-            margin-bottom: 32px; /* Espacio inferior */
-        }
-    
-        /* Texto de sección */
-        .section__text {
-            font-size: 1.5rem; /* Tamaño de texto */
-            line-height: 1.6; /* Altura de línea */
-        }
-    
-        /* Productos destacados */
-        .productos-destacados__row {
-            justify-content: space-between; /* Espaciado */
-            gap: 32px; /* Espacio entre productos */
-        }
-    
-        .productos-destacados__col {
-            max-width: 350px; /* Ancho máximo de columnas */
-            flex: 1; /* Expansión */
-        }
-        .productos-destacados__col p {
-            font-size: 2em;
-        }
-        .productos-destacados__rate{
-            font-size: 2em;
-        }
-        .productos-destacados__name{
-            font-size: 1.5em;
-        }
-        .productos-destacados__title{
-            font-size: 3em;
-        }
-        .promo__text{
-            font-size: 2em;
-        }
-    
-        /* Imagen promocional */
-        .promo__img img {
-            max-width: 50%; /* Tamaño máximo */
-            margin: 0 auto; /* Centrado */
-        }
-    
-        /* Texto promocional */
-        .promo__text {
-            font-size: 32px; /* Tamaño de texto */
-            max-width: 600px; /* Ancho máximo */
-            margin: 0 auto; /* Centrado */
-            text-align: center; /* Centrado */
-        }
-    
-        /* Encabezado */
-        .header {
-            padding: 32px; /* Relleno */
-        }
-    
-        /* Enlaces del menú */
-        .header__nav-item a,
-        .header__menu-item a {
-            font-size: 1.2rem; /* Tamaño de fuente */
-            padding: 16px; /* Relleno */
-        }
-    
-        /* Botones */
-        .btn,
-        .btn:hover {
-            padding: 1.5rem 3rem; /* Relleno */
-            font-size: 1.5rem; /* Tamaño de fuente */
-        }
-        
-        .btn--dark {
-            padding: 15px 30px; /* Relleno */
-            font-size: 1.2em; /* Tamaño de fuente */
-        }
-    
-        /* Contenido del pie de página */
-        .footer__content {
-            gap: 3rem; /* Espaciado */
-            padding: 16px; /* Relleno */
-        }
-    
-        /* Íconos sociales */
-        .footer__social h2{
-            font-size: 2.5em;
-        }
-        .footer__social--icons a {
-            font-size: 2.5rem; /* Tamaño de íconos */
-            margin-right: 16px; /* Espacio a la derecha */
-        }
-    
-        /* Formularios */
-        .form {
-            max-width: 800px; /* Ancho máximo */
-            margin: 0 auto; /* Centrado */
-            padding: 32px; /* Relleno */
-        }
-    
-        .form__input,
-        .form__textarea {
-            width: 100%; /* Ancho completo */
-            padding: 16px; /* Relleno */
-            margin: 16px 0; /* Espacio vertical */
-            font-size: 1.32px; /* Tamaño de fuente */
-        }
-    
-        .form__button {
-            padding: 16px 32px; /* Relleno */
-            font-size: 1.2rem; /* Tamaño de fuente */
-        }
-    
-        /* Sección de recetas */
-        .receta {
-            margin: 2rem 0; /* Margen */
-            padding: 32px; /* Relleno */
-        }
-    
-        .receta__title {
-            font-size: 40px; /* Tamaño de título */
-            margin-bottom: 16px; /* Espacio inferior */
-        }
-    
-        .receta__ingredients,
-        .receta__instructions {
-            font-size: 22px; /* Tamaño de fuente */
-            margin: 16px 0; /* Espacio vertical */
-        }
-        .recetas__header{
-            font-size: 25px;
-        }
-        
-        /* Perfil de usuario */
-        .perfil {
-            max-width: 900px; /* Ancho máximo */
-            margin: 0 auto; /* Centrado */
-            padding: 32px; /* Relleno */
-        }
-    
-        .perfil__title {
-            font-size: 30px; 
-            margin-bottom: 1.5rem; /* Espacio inferior */
-        }
-    
-        .perfil__info {
-            font-size: 1.5rem; /* Tamaño de fuente */
-            margin: 16px 0; /* Espacio vertical */
-        }
-    
-        .perfil__edit-button {
-            padding: 16px 32px; /* Relleno */
-            font-size: 18px; /* Tamaño de fuente */
-        }
+    .seccion__title {
+        font-size: 3rem; 
+        margin-bottom: 32px; 
+    }
+ 
+    .seccion__text {
+        font-size: 1.5rem; 
+        line-height: 25.6px; 
+    }
 
-        .registro__heading {
-            font-size: 40px;
-        }
-        .registro__input,
-        .registro__agreement{
-            font-size: 24px;
-        }
+   
+    .productos-destacados__fila {
+        justify-content: space-between; 
+        gap: 32px;
+    }
 
-        .btn a{
-            font-size: 20px;
-        }
+    .productos-destacados__col {
+        max-width: 350px; 
+        flex: 1; 
+    }
+    .productos-destacados__col p {
+        font-size: 2em;
+    }
+    .productos-destacados__rate{
+        font-size: 2em;
+    }
+    .productos-destacados__name{
+        font-size: 1.5em;
+    }
+    .productos-destacados__title{
+        font-size: 3em;
+    }
+    .tiempo__text{
+        font-size: 2em;
+    }
 
-        .slider__titulo {
-            font-size: 35px; 
-        }
+    .tiempo__img img {
+        max-width: 50%; 
+        margin: 0 auto; 
+    }
+   
+    .tiempo__text {
+        font-size: 32px; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        text-align: center; 
+    }
 
-        .btn-scroll-top {
-            font-size: 20px;
-            padding: 20px;
-            border: 3px solid var(--color-secondary);
-            z-index: 100;
-        }
+    .header {
+        padding: 25px;
+    }
 
-        .header__logo img {
-            max-height: 380px;
-        }
+   
+    .header__nav-item a,
+    .header__menu-item a {
+        font-size: 18px; 
+        padding: 16px; 
+    }
 
-        .registro__period,
-        .registro-formulario--habits,
-        .contenedor__columnas,
-        .observaciones,
-        .registro-form p,
-        .header__nav-item a,
-        .header__menu-item a,
-        .receta__favoritos i,
-        .receta__contador,
-        .receta__leer,
-        .receta__description {
-            font-size: 20px;
-            
-        }
-       
+    
+    .btn,
+    .btn:hover {
+        padding: 18px 30px; 
+        font-size: 18px; 
+    }
+    .btn--dark {
+        padding: 10px 20px; 
+        font-size: 18px; 
+    }
 
+    .footer__content {
+        gap: 30px; 
+        padding: 16px; 
+    }
+
+    .footer__social h2{
+        font-size: 25px;
+    }
+    .footer__social--icons a {
+        font-size: 30px; 
+    }
+
+    .form {
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 32px; 
+    }
+
+    .form__input,
+    .form__textarea {
+        width: 100%; 
+        padding: 16px;
+        margin: 16px 0; 
+        font-size: 1.32px; 
+    }
+
+    .form__button {
+        padding: 16px 32px; 
+        font-size: 18px; 
+    }
+
+    
+    .receta {
+        margin: 30px 0; 
+        padding: 32px; 
+    }
+
+    .receta__title {
+        font-size: 40px; 
+        margin-bottom: 16px; 
+    }
+
+    .receta__ingredients,
+    .receta__instructions {
+        font-size: 22px; 
+        margin: 16px 0; 
+    }
+    .recetas__header{
+        font-size: 25px;
     }
     
+    .perfil {
+        max-width: 900px; 
+        margin: 0 auto; 
+        padding: 32px; 
+    }
+
+    .perfil__title {
+        font-size: 30px; 
+        margin-bottom: 1.5rem;
+    }
+
+    .perfil__info {
+        font-size: 1.5rem; 
+        margin: 16px 0; 
+    }
+
+    .perfil__edit-button {
+        padding: 16px 32px;
+        font-size: 18px; 
+    }
+
+    .registro__heading {
+        font-size: 30px;
+    }
+    .registro__input,
+    .registro__agreement{
+        font-size: 24px;
+    }
+
+    .btn a{
+        font-size: 20px;
+    }
+
+    .slider__titulo {
+        font-size: 35px; 
+    }
+
+    .btn--scroll {
+        font-size: 18px;
+        padding: 18px;
+        border: 3px;
+        
+    }
+
+    .registro__period,
+    .registro-formulario--habits,
+    .contenedor__columnas,
+    .observaciones,
+    .registro-form p,
+    .header__nav-item a,
+    .header__menu-item a,
+    .receta__favoritos i,
+    .receta__contador,
+    .receta__leer,
+    .receta__description {
+        font-size: 20px;
+    }   
+}
 

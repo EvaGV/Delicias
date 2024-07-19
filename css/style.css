@@ -592,7 +592,7 @@ _______________________ */
 /* IMÁGENES DE LA CABECERA DE CADA FORMULARIO */
 
 .imagen {
-    background-image: url('/img/form.webp');
+    background-image: url(../img/form.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

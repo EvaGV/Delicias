@@ -1280,7 +1280,7 @@ ______________________*/
     }
 }
 
-/* 3. Computadoras de escritorio, pantallas grandes (769px - 1200px) */
+/* 3. Ordenadores de escritorio, pantallas grandes (769px - 1200px) */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
 
     .header__nav {

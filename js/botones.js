@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (iniciosesion) {
         iniciosesion.addEventListener('click', function() {
-            window.location.href = 'formulario.html';
+            window.location.href = 'iniciosesion.html';
         });
     }
 });

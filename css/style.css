@@ -1170,11 +1170,11 @@ ______________________*/
     .header__menu-dropdown.show{
         top: 80px; 
     }
-    /* __________ */
+    
     .header__nav-item a,
     .header__menu-item a {
-        font-size: 18px; 
-        padding: 16px; 
+        font-size: 1.125rem; 
+        padding: 1rem; 
     }
     .seccion__text{
         font-size: 30px;
@@ -1182,19 +1182,19 @@ ______________________*/
 
     .btn--dark {
         padding: 10px 20px; 
-        font-size: 1.25rem; 
+        font-size: 20px; 
     }
 
     .perfil {
-        padding: 1rem;
+        padding: 16px;
         max-width: auto;
-        margin: 2rem auto;
+        margin: 32px auto;
     }
 
     .footer__content {
         flex-direction: column;
         align-items: center; 
-        gap: 16px;
+        gap: 1rem;
     }
 
     .footer__column {

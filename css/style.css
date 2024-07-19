@@ -608,23 +608,23 @@ _______________________ */
 }
 
 .imagen--opcion2 {
-    background-image: url(/img/naranja_fondo.webp);
+    background-image: url(../img/naranja_fondo.webp);
 }
 
 .imagen--opcion3 {
-    background-image: url(/img/sandia.webp);
+    background-image: url(../img/sandia.webp);
 }
 
 .imagen--opcion4 {
-    background-image: url(/img/aguacate_rosa.webp)
+    background-image: url(../img/aguacate_rosa.webp)
 }
 
 .imagen--opcion5{
-    background-image: url(/img/zanahorias.webp);
+    background-image: url(../img/zanahorias.webp);
 }
 
 .imagen--opcion6{
-    background-image: url(/img/varias4.webp);
+    background-image: url(../img/varias4.webp);
 }
 
 .imagen__title {

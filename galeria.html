@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="galeria" content="width=device-width, initial-scale=1.0">
-   
+
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Unbounded:wght@200..900&display=swap"
+        rel="stylesheet">
 
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- JavaScript -->
-   <script src="js/script.js" defer></script>
-   <script src="js/scroll.js" defer></script>
-   <script src="js/galeria.js" defer></script>
-   <script src="js/menubarras.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/galeria.js" defer></script>
+    <script src="js/menubarras.js" defer></script>
     <title>Galería</title>
-    
+
 </head>
 
 <body>
@@ -38,13 +42,14 @@
                 <li class="header__nav-item"><a href="recetas.html" title="recetas">Recetas</a></li>
                 <li class="header__nav-item"><a href="galeria.html" title="galeria">Galería</a></li>
                 <li class="header__nav-item"><a href="contact.html" title="nosotros">Sobre nosotros</a></li>
-                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i class="fa-solid fa-user"></i></a></li>
+                <li class="header__nav-item"><a href="iniciosesion.html" title="perfil"><i
+                            class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
 
         <!-- MENÚ DESPLEGABLE -->
         <button class="header__menu-icon" id="menu-toggle" title="botón"><i class="fa fa-bars"></i></button>
-    <nav class="header__menu-dropdown" id="dropdown-menu">
+        <nav class="header__menu-dropdown" id="dropdown-menu">
             <ul class="header__menu-list">
                 <li class="header__menu-item"><a href="index.html" title="inicio">Inicio</a></li>
                 <li class="header__menu-item"><a href="recetas.html" title="recetas">Recetas</a></li>
@@ -57,8 +62,8 @@
         <!-- BOTÓN MODO OSCURO -->
         <button class="btn--dark" id="modo-oscuro" title="botón"><i class="fa-solid fa-moon"></i></button>
 
-          <!-- BOTÓN SCROLL ARRIBA -->
-        <span id="btnScroll" class="btn--scroll" >
+        <!-- BOTÓN SCROLL ARRIBA -->
+        <span id="btnScroll" class="btn--scroll">
             <i class="fa-solid fa-arrow-up"></i>
         </span>
 
@@ -67,11 +72,14 @@
     <!-- Formada por un título y un slider con 20 fotos que se pueden pasar infinitamente, no se queda parada cuando llega a la última foto-->
 
     <main class="main-slider">
-            <section class="slider">
-                <div class="slider__header">
-                    <h1 class="slider__titulo">Así lucen nuestras frutas y verduras. Apetecibles, ¿verdad?</h1>
-                </div>
-                <div class="slider__contenedor">
+
+        <section class="slider">
+
+            <div class="slider__header">
+                <h1 class="slider__titulo">Así lucen nuestras frutas y verduras. Apetecibles, ¿verdad?</h1>
+            </div>
+
+            <div class="slider__contenedor">
                 <div class="slider__img">
                     <img src="img/citricos3.webp" alt="Foto 1">
                     <img src="img/limon.webp" alt="Foto 2">
@@ -92,7 +100,6 @@
                     <img src="img/frutosrojos.webp" alt="Foto 18">
                     <img src="img/variado2.webp" alt="Foto 19">
                     <img src="img/varias3.webp" alt="Foto 20">
-
                 </div>
             </div>
 
@@ -103,22 +110,25 @@
             </button>
             <button class="flecha__slider flecha__slider--right" id="siguiente" title="botón">
                 <i class="fa-solid fa-arrow-right"></i>
-            </button>  
+            </button>
 
         </section>
     </main>
-    
+
 
     <footer class="footer">
-        <div class="footer__content">    
-                <div class="footer__social">
-                    <h2>SÍGUENOS</h2>
-                    <div class="footer__social--icons">
-                        <a href="https://www.facebook.com" class="fa-brands fa-facebook" title="facebook" target="_blank" rel="no-referrer"></a>
-                        <a href="https://www.instagram.com" class="fa-brands fa-instagram" title="instagram" target="_blank" rel="no-referrer"></a>
-                        <a href="https://www.x.com" class="fa-brands fa-twitter" title="x" target="_blank" rel="no-referrer"></a>
-                    </div>
+        <div class="footer__content">
+            <div class="footer__social">
+                <h2>SÍGUENOS</h2>
+                <div class="footer__social--icons">
+                    <a href="https://www.facebook.com" class="fa-brands fa-facebook" title="facebook" target="_blank"
+                        rel="no-referrer"></a>
+                    <a href="https://www.instagram.com" class="fa-brands fa-instagram" title="instagram" target="_blank"
+                        rel="no-referrer"></a>
+                    <a href="https://www.x.com" class="fa-brands fa-twitter" title="x" target="_blank"
+                        rel="no-referrer"></a>
                 </div>
+            </div>
         </div>
     </footer>
 

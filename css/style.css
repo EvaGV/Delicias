@@ -57,7 +57,8 @@ body, html {
 }
 
 /* BOTONES DE TODO EL DOCUMENTO */
-.btn{
+.btn,
+.input[type="button"].btn{
     background-color: var(--color-secondary);
     color: var(--text-primary);
     padding: 1rem 2rem;
@@ -66,6 +67,7 @@ body, html {
     cursor: pointer;
     font-size: 1rem;
 }
+
 
 .btn:hover {
     transform: scale(1.1);
@@ -96,7 +98,7 @@ body, html {
     right: 20px; 
     background-color: var(--color-primary); 
     color: var(--text-primary); 
-    border: 5px solid var(--color-secondary);
+    border: 3px solid var(--color-secondary);
     border-radius: 30px; 
     padding: 10px; 
     cursor: pointer; 
@@ -541,7 +543,6 @@ _______________________ */
     align-items: center;
 }
 
-
 .registro__input {
     width: 90%;
     background-color: #f8f2e5;
@@ -572,21 +573,6 @@ _______________________ */
     color: var(--text-primary);
     border-color: var(--text-primary);
     transform: scale(1.1);
-}
-
-.registro__habits {
-    display: inline-block; /*Alinear los elementos en la misma línea*/
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    border-radius: .625rem;
-    padding: .625rem;
-    background-color: var(--color-primary);
-    color: var(--text-primary);
-    border: 2px solid;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
 .registro p {
@@ -624,7 +610,7 @@ _______________________ */
 }
 
 .imagen--opcion3 {
-    background-image: url(/img/limon_fondo.webp);
+    background-image: url(/img/sandia.webp);
 }
 
 .imagen--opcion4 {
@@ -792,21 +778,20 @@ __________________*/
     margin-bottom: 1rem;
 }
 
-.ulario--habits {
+.formulario--habitos {
     display: flex;
     flex-direction: column;
 }
 
-.registro-formulario--habits label {
+.registro-formulario--habitos label {
     margin-bottom: .5rem;
-    font-weight: 600;
-    
+    font-weight: 1.5rem;
 }
 
-.registro-formulario--habits select {
+.registro-formulario--habitos select {
     padding: .5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: .3125rem;
     font-size: 1rem;
 }
 
@@ -833,7 +818,7 @@ __________________*/
 }
 
 .registro__sesion{
-    line-height: 48px;
+    line-height: 3rem;
 }
 
 
@@ -867,7 +852,7 @@ _______________________*/
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    max-width: 1200px; 
+    max-width: 75rem; 
     margin-left: auto; 
     margin-right: auto; 
 }
@@ -876,33 +861,33 @@ _______________________*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    max-width: 25rem;
     margin: 0 auto;
 }
 
 .contact__input,
 .contact__textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: .625rem;
+    margin-bottom: 16px;
+    border: .0625rem solid #ccc;
+    border-radius: .3125rem;
 }
 
 .contact__textarea {
     resize: none;
-    height: 100px;
+    height: 6.25rem;
 }
 
 .map__container {
     margin: 2rem auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
 }
 
 .map__iframe {
     width: 100%;
-    height: 400px;
+    height: 25rem;
     border: 0;
 }
 
@@ -919,13 +904,13 @@ _______________________ */
 
 .recetas {
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
 }
 
 .recetas__header {
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 20px;
+    margin-top: 9.375rem;
+    margin-bottom: 1.25rem;
     color: var(--color-secondary);
     font-size: 1.5em;
 }
@@ -938,14 +923,14 @@ _______________________ */
 .recetas__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .receta {
-    border: 1px solid var(--color-primary);
-    padding: 20px;
-    border-radius: 10px;
+    border: .0625rem solid var(--color-primary);
+    padding: 1.25rem;
+    border-radius: .625rem;
     background-color: var(--text-primary);
 }
 
@@ -1040,7 +1025,7 @@ _______________________ */
     padding: .5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 30px;
+    border-radius: 1.875rem;
 }
 
 .comentarios__submit:hover {
@@ -1048,7 +1033,7 @@ _______________________ */
 }
 
 .paginas {
-    margin: 0 auto 80px;
+    margin: 0 auto 5rem;
     display: flex;
     justify-content: center;
 }
@@ -1057,13 +1042,14 @@ _______________________ */
     display: inline-block;
     background-color: var(--color-primary);
     color: var(--text-primary);
-    border: 1px solid ;
-    margin-left: 10px;
-    width: 40px;
+    border: .0625rem solid ;
+    margin-left: .625rem;
+    width: 2.5rem;
     height: 40px;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .paginas a:hover {
@@ -1094,8 +1080,8 @@ __________________________ */
 
 .slider__header {
     text-align: center;
-    margin-top: 80px; 
-    margin-bottom: 20px;
+    margin-top: 5rem; 
+    margin-bottom: 1.25rem;
     color: var(--color-secondary);
 }
 
@@ -1107,11 +1093,11 @@ __________________________ */
 
 .slider__contenedor {
     overflow: hidden; /* Oculta las imágenes fuera del contenedor */
-    border: 2px solid var(--color-secondary); 
-    border-radius: 30px; 
-    padding: 20px;
+    border: .125rem solid var(--color-secondary); 
+    border-radius: 1.875rem; 
+    padding: 1.25rem;
     position: relative; /*para posicionar las flechas*/
-    margin: 30px;
+    margin: 1.875rem;
  
 }
 
@@ -1126,7 +1112,7 @@ __________________________ */
     max-width: 50%; 
     height: auto;
     flex-shrink: 0; /* Evita que las imágenes se reduzcan */
-    border-radius: 10px; 
+    border-radius: .625rem; 
 }
 
 .flecha__slider {
@@ -1136,16 +1122,16 @@ __________________________ */
     background-color: rgba(255, 255, 255, 0.7);
     border: none;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
+    padding: .625rem;
+    border-radius: .3125rem;
 }
 
 .flecha__slider--left {
-    left: 40px; 
+    left: 2.5rem; 
 }
 
 .flecha__slider--right {
-    right: 40px; 
+    right: 2.5rem; 
 }
 
 .hidden {
@@ -1376,8 +1362,7 @@ ______________________*/
         font-size: 1.5rem; 
         line-height: 25.6px; 
     }
-
-   
+ 
     .productos-destacados__fila {
         justify-content: space-between; 
         gap: 32px;
@@ -1418,15 +1403,13 @@ ______________________*/
     .header {
         padding: 25px;
     }
-
-   
+  
     .header__nav-item a,
     .header__menu-item a {
         font-size: 18px; 
         padding: 16px; 
     }
 
-    
     .btn,
     .btn:hover {
         padding: 18px 30px; 
@@ -1467,8 +1450,7 @@ ______________________*/
         padding: 16px 32px; 
         font-size: 18px; 
     }
-
-    
+   
     .receta {
         margin: 30px 0; 
         padding: 32px; 
@@ -1529,7 +1511,10 @@ ______________________*/
         font-size: 18px;
         padding: 18px;
         border: 3px;
-        
+    }
+
+    .header__logo img{
+        width: 100%;
     }
 
     .registro__period,

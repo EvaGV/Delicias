@@ -843,7 +843,7 @@ _______________________*/
 }
 
 .map {
-    background-image: url(/img/frambuesa.webp);
+    background-image: url(/img/frambuesas.webp);
 }
 
 .about,
@@ -851,12 +851,15 @@ _______________________*/
 .map {
     padding: 4rem 1rem;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
     max-width: 75rem; 
     margin-left: auto; 
     margin-right: auto; 
+}
+.about{
+    margin-top: 50px;
 }
 
 .contact__form {
@@ -1167,6 +1170,15 @@ ______________________*/
     .header__menu-dropdown.show{
         top: 80px; 
     }
+    /* __________ */
+    .header__nav-item a,
+    .header__menu-item a {
+        font-size: 38px; 
+        padding: 16px; 
+    }
+    .seccion__text{
+        font-size: 20px;
+    }
 
     .btn--dark {
         padding: 10px 20px; 
@@ -1200,11 +1212,14 @@ ______________________*/
 
     .productos-destacados__fila {
         margin: 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     .recetas__grid {
-            grid-template-columns: 1fr;
-        }
+        grid-template-columns: 1fr;
+       
+    }
     
     .receta {
             margin: 1em;
@@ -1231,10 +1246,6 @@ ______________________*/
 
     .contenedor-fruta {
         margin-top: 20px; 
-    }
-    .footer__content {
-        width: 90%;
-        grid-gap: 10px;
     }
    
     .map__iframe {
@@ -1311,14 +1322,9 @@ ______________________*/
     }
 
     .productos-destacados__col {
-        max-width: calc(50% - 16px); 
-        transform: translateY(-5px);
+        width: calc(50% - 16px); 
     }
 
-    .productos-destacados__col img {
-        max-width: 15em; 
-        max-height: 15em;
-    }
 
     .tiempo__container {
         flex-direction: column; 
@@ -1339,15 +1345,16 @@ ______________________*/
         max-width: 100%;
     }
 
-    .footer__social--icons a {
-        font-size: 1.2rem;
-    }
-
     .recetas__grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .receta {
         margin: 1em;
+    }
+    .productos-destacados__fila {
+       
+        flex-direction: row;
+        align-items: center;
     }
 
 }

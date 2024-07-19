@@ -587,6 +587,8 @@ _______________________ */
     font-size: 1rem;
 }
 
+
+
 /* IMÁGENES DE LA CABECERA DE CADA FORMULARIO */
 
 .imagen {
@@ -1098,7 +1100,6 @@ __________________________ */
     padding: 1.25rem;
     position: relative; /*para posicionar las flechas*/
     margin: 1.875rem;
- 
 }
 
 .slider__img {
@@ -1113,6 +1114,10 @@ __________________________ */
     height: auto;
     flex-shrink: 0; /* Evita que las imágenes se reduzcan */
     border-radius: .625rem; 
+}
+
+.slider__img img:hover{
+    transform: scale(1.5);
 }
 
 .flecha__slider {

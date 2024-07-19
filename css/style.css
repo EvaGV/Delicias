@@ -1152,6 +1152,7 @@ ______________________*/
 
 /* 1. Dispositivos móviles (320px- 480px) */
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
     .header__menu-icon {
         display: block;
     }

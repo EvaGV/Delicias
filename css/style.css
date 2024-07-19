@@ -604,7 +604,7 @@ _______________________ */
     position: relative;
 }
 .imagen--opcion {
-    background-image: url(/img/varios2.webp);
+    background-image: url(../img/varios2.webp);
 }
 
 .imagen--opcion2 {
